@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @area.name %>
+</p>
+
+<p>
+  <strong>Capacity:</strong>
+  <%= @area.capacity %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @area.type %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @area.image %>
+</p>
+
+<%= link_to 'Edit', edit_area_path(@area) %> |
+<%= link_to 'Back', areas_path %>
