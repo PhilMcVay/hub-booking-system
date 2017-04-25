@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170425202143) do
+ActiveRecord::Schema.define(version: 20170425202520) do
 
   create_table "areas", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
@@ -40,9 +40,11 @@ ActiveRecord::Schema.define(version: 20170425202143) do
     t.string   "resource"
     t.string   "status"
     t.integer  "area_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.integer  "booking_details_id"
     t.index ["area_id"], name: "index_bookings_on_area_id", using: :btree
+    t.index ["booking_details_id"], name: "index_bookings_on_booking_details_id", using: :btree
   end
 
   create_table "resources", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
