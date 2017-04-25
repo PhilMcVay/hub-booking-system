@@ -7,6 +7,10 @@
     <tr>
       <th>Name</th>
       <th>Company</th>
+      <th>Email</th>
+      <th>Membership</th>
+      <th>Other notes</th>
+      <th>Booking</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,6 +20,10 @@
       <tr>
         <td><%= booking_detail.name %></td>
         <td><%= booking_detail.company %></td>
+        <td><%= booking_detail.email %></td>
+        <td><%= booking_detail.membership %></td>
+        <td><%= booking_detail.other_notes %></td>
+        <td><%= booking_detail.booking %></td>
         <td><%= link_to 'Show', booking_detail %></td>
         <td><%= link_to 'Edit', edit_booking_detail_path(booking_detail) %></td>
         <td><%= link_to 'Destroy', booking_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
