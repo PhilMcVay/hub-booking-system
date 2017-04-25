@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170425201131) do
+ActiveRecord::Schema.define(version: 20170425201800) do
 
   create_table "areas", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
@@ -21,10 +21,23 @@ ActiveRecord::Schema.define(version: 20170425201131) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "bookings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.integer  "no_of_people"
+    t.string   "resource"
+    t.string   "status"
+    t.integer  "area_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["area_id"], name: "index_bookings_on_area_id", using: :btree
+  end
+
   create_table "resources", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "item"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "bookings", "areas"
 end

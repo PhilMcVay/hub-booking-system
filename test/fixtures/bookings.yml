@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_time: 2017-04-25 21:18:00
+  end_time: 2017-04-25 21:18:00
+  no_of_people: 1
+  resource: MyString
+  status: MyString
+  area: one
+  booking_detail: one
+
+two:
+  start_time: 2017-04-25 21:18:00
+  end_time: 2017-04-25 21:18:00
+  no_of_people: 1
+  resource: MyString
+  status: MyString
+  area: two
+  booking_detail: two
