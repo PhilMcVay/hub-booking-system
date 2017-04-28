@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170425215320) do
+ActiveRecord::Schema.define(version: 20170428192359) do
+
+  create_table "area_resources", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "area_id"
+    t.integer  "resource_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["area_id"], name: "index_area_resources_on_area_id", using: :btree
+    t.index ["resource_id"], name: "index_area_resources_on_resource_id", using: :btree
+  end
 
   create_table "areas", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
@@ -71,6 +80,8 @@ ActiveRecord::Schema.define(version: 20170425215320) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "area_resources", "areas"
+  add_foreign_key "area_resources", "resources"
   add_foreign_key "booking_details", "bookings"
   add_foreign_key "bookings", "areas"
 end
