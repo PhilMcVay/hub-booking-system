@@ -19,7 +19,7 @@
         <td><%= area.name %></td>
         <td><%= area.capacity %></td>
         <td><%= area.type %></td>
-        <td><%= area.image %></td>
+        <td><%= image_tag area.image.url(:thumb) %></td>
         <td><%= link_to 'Show', area %></td>
         <td><%= link_to 'Edit', edit_area_path(area) %></td>
         <td><%= link_to 'Destroy', area, method: :delete, data: { confirm: 'Are you sure?' } %></td>
