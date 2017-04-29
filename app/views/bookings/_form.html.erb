@@ -16,10 +16,13 @@
     <%= f.select :no_of_people, (1..150), { :include_blank => true } %>
   </div>
 
-  <div class="field">
-    <%= f.label :resource %>
-    <%= f.text_field :resource %>
-  </div>
+  <%= f.collection_check_boxes(:resource, Resource.all, :id, :item) do |c| %>
+    <div class="check">
+       <%= c.label do %>
+         <%= c.check_box + c.text %>
+       <% end %>
+    </div>
+  <% end %>
 
   <div class="field">
     <%= f.label :start_time %>
@@ -33,7 +36,7 @@
 
   <div class="field">
     <%= f.label :area_id %>
-    <%= f.collection_select :id, @areas, :id, :name, { :include_blank => true } %>
+    <%= f.collection_select :area_id, @areas, :id, :name, { :include_blank => true } %>
   </div>
 
   <div class="actions">
