@@ -15,16 +15,19 @@ class BookingsController < ApplicationController
   # GET /bookings/new
   def new
     @booking = Booking.new
+    @areas = Area.all
   end
 
   # GET /bookings/1/edit
   def edit
+    @areas = Area.all
   end
 
   # POST /bookings
   # POST /bookings.json
   def create
     @booking = Booking.new(booking_params)
+    @areas = Area.all
 
     respond_to do |format|
       if @booking.save
@@ -71,4 +74,5 @@ class BookingsController < ApplicationController
     def booking_params
       params.require(:booking).permit(:start_time, :end_time, :no_of_people, :resource, :status, :area_id, :booking_detail_id)
     end
+
 end
