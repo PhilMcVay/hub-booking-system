@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  resources :booking_details
+  
   resources :resources
   resources :areas
-  resources :bookings
+
+  resources :bookings do
+    post :approve
+    resources :booking_details
+  end
 
   root to: "areas#index"
 

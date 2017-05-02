@@ -64,6 +64,13 @@ class BookingsController < ApplicationController
     end
   end
 
+  # Approve pending bookings
+  def approve
+    @booking = Booking.find(params[:booking_id])
+    @booking.update(status: "Approved")
+    redirect_to bookings_path
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_booking
