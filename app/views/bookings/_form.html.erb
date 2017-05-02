@@ -20,20 +20,20 @@
     <div class="check">
        <%= c.label do %>
          <%= c.check_box + c.text %>
-       <% end %>
+       <% end %><br>
     </div>
   <% end %>
 
   <div class="field">
     <%= f.label :start_time %>
     <%= f.date_select :start_time %><br>
-    <%= f.time_select :start_time %>
+    <%= f.time_select :start_time, { :ignore_date => true } %>
   </div>
 
   <div class="field">
     <%= f.label :end_time %>
     <%= f.date_select :end_time %><br>
-    <%= f.time_select :end_time %>
+    <%= f.time_select :end_time, { :ignore_date => true } %>
   </div>
 
   <div class="field">
@@ -44,4 +44,6 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+
+
 <% end %>
