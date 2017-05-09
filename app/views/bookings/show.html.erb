@@ -2,12 +2,12 @@
 
 <p>
   <strong>Start time:</strong>
-  <%= @booking.start_time.strftime("%d-%m-%y" + " ---- " + "%l:%m")  %>
+  <%= @booking.start_time.strftime("%a #{@booking.start_time.day.ordinalize} %b" + " || " + "%H:%M")  %>
 </p>
 
 <p>
   <strong>End time:</strong>
-  <%= @booking.end_time.strftime("%d-%m-%y" + " ---- " + "%l:%m")  %>
+  <%= @booking.end_time.strftime("%a #{@booking.start_time.day.ordinalize} %b" + " || " + "%H:%M")  %>
 </p>
 
 <p>

@@ -18,8 +18,8 @@
   <tbody>
     <% @bookings.each do |booking| %>
       <tr>
-        <td><%= booking.start_time.strftime("%d-%m-%y" + " || " + "%l:%m") %></td>
-        <td><%= booking.end_time.strftime("%d-%m-%y" + " || " + "%l:%m") %></td>
+        <td><%= booking.start_time.strftime("%a #{booking.start_time.day.ordinalize} %b" + " || " + "%H:%M") %></td>
+        <td><%= booking.end_time.strftime("%a #{booking.start_time.day.ordinalize} %b" + " || " + "%H:%M") %></td>
         <td><%= booking.no_of_people %></td>
         <td><%= booking.resource %></td>
         <td><%= booking.status %></td>
