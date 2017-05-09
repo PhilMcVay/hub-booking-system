@@ -7,8 +7,7 @@ Rails.application.routes.draw do
 
   resources :bookings do
     post :approve
-    resources :booking_details
-  end
+    end
 
   root to: "areas#index"
 

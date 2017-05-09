@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170429214122) do
+ActiveRecord::Schema.define(version: 20170504183827) do
 
   create_table "area_resources", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "area_id"
@@ -33,18 +33,6 @@ ActiveRecord::Schema.define(version: 20170429214122) do
     t.datetime "image_updated_at"
   end
 
-  create_table "booking_details", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name"
-    t.string   "company"
-    t.string   "email"
-    t.string   "membership"
-    t.text     "other_notes", limit: 65535
-    t.integer  "booking_id"
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
-    t.index ["booking_id"], name: "index_booking_details_on_booking_id", using: :btree
-  end
-
   create_table "bookings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.datetime "start_time"
     t.datetime "end_time"
@@ -52,11 +40,14 @@ ActiveRecord::Schema.define(version: 20170429214122) do
     t.string   "resource"
     t.string   "status"
     t.integer  "area_id"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-    t.integer  "booking_details_id"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.string   "name"
+    t.string   "company"
+    t.string   "email"
+    t.string   "membership"
+    t.text     "other_notes",  limit: 65535
     t.index ["area_id"], name: "index_bookings_on_area_id", using: :btree
-    t.index ["booking_details_id"], name: "index_bookings_on_booking_details_id", using: :btree
   end
 
   create_table "resources", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -85,6 +76,5 @@ ActiveRecord::Schema.define(version: 20170429214122) do
 
   add_foreign_key "area_resources", "areas"
   add_foreign_key "area_resources", "resources"
-  add_foreign_key "booking_details", "bookings"
   add_foreign_key "bookings", "areas"
 end

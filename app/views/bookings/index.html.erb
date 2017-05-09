@@ -11,7 +11,6 @@
       <th>Resource</th>
       <th>Status</th>
       <th>Area</th>
-      <th>Booking detail</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -25,7 +24,6 @@
         <td><%= booking.resource %></td>
         <td><%= booking.status %></td>
         <td><%= booking.area.name %></td>
-        <td><%= booking.booking_details_id %></td>
         <td><%= link_to 'Show', booking %></td>
         <td><%= link_to 'Edit', edit_booking_path(booking) %></td>
         <td><%= link_to 'Destroy', booking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
