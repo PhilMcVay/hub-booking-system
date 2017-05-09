@@ -38,6 +38,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 # Paperclip for image upload
 gem "paperclip", "~> 5.0.0"
+# Overlap validation for bookings
+gem 'validates_overlap'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
