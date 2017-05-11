@@ -1,0 +1,47 @@
+<%= form_for(detail) do |f| %>
+  <% if detail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(detail.errors.count, "error") %> prohibited this detail from being saved:</h2>
+
+      <ul>
+      <% detail.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :company %>
+    <%= f.text_field :company %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :membership %>
+    <%= f.text_field :membership %>
+  </div>
+
+  <div class="field">
+    <%= f.label :other_notes %>
+    <%= f.text_area :other_notes %>
+  </div>
+
+  <div class="field">
+    <%= f.label :booking_id_id %>
+    <%= f.text_field :booking_id_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
