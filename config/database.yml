@@ -13,13 +13,11 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
-  username: hbs
-  password: hbs
-  socket: /tmp/mysql.sock
+  url: <%= ENV.fetch("JAWSDB_URL") %>
 
 development:
   <<: *default
-  database: hub_booking_system_development
+
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -49,6 +47,3 @@ test:
 #
 production:
   <<: *default
-  database: hub_booking_system_production
-  username: hub_booking_system
-  password: <%= ENV['HUB_BOOKING_SYSTEM_DATABASE_PASSWORD'] %>
