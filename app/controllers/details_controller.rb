@@ -1,10 +1,11 @@
 class DetailsController < ApplicationController
-  before_action :set_detail, only: [:show, :edit, :update, :destroy]
+  before_action :set_detail, :set_booking, only: [:show, :edit, :update, :destroy]
 
   # GET /details
   # GET /details.json
   def index
     @details = Detail.all
+    @booking = Booking.find(params[:booking_id])
   end
 
   # GET /details/1
@@ -15,6 +16,7 @@ class DetailsController < ApplicationController
   # GET /details/new
   def new
     @detail = Detail.new
+    @booking = Booking.find(params[:booking_id])
   end
 
   # GET /details/1/edit
@@ -25,6 +27,8 @@ class DetailsController < ApplicationController
   # POST /details.json
   def create
     @detail = Detail.new(detail_params)
+    @booking = Booking.find(params[:booking_id])
+    @detail.booking_id = @booking.id
 
     respond_to do |format|
       if @detail.save
@@ -69,6 +73,6 @@ class DetailsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def detail_params
-      params.require(:detail).permit(:name, :company, :email, :membership, :other_notes, :booking_id_id)
+      params.require(:detail).permit(:name, :company, :email, :membership, :other_notes, :booking_id)
     end
 end

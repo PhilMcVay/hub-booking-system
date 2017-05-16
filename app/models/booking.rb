@@ -1,5 +1,6 @@
 class Booking < ApplicationRecord
   belongs_to :area
+  has_many :details, dependent: :destroy
 
   after_initialize :default_status
 
