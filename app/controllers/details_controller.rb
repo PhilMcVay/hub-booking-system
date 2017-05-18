@@ -29,6 +29,7 @@ class DetailsController < ApplicationController
     @detail = Detail.new(detail_params)
     @booking = Booking.find(params[:booking_id])
     @detail.booking_id = @booking.id
+    @booking.detail_id = @detail.id
 
     respond_to do |format|
       if @detail.save
