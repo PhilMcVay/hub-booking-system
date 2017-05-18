@@ -42,11 +42,6 @@ ActiveRecord::Schema.define(version: 20170511180209) do
     t.integer  "area_id"
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
-    t.string   "name"
-    t.string   "company"
-    t.string   "email"
-    t.string   "membership"
-    t.text     "other_notes",  limit: 65535
     t.integer  "detail_id"
     t.index ["area_id"], name: "index_bookings_on_area_id", using: :btree
     t.index ["detail_id"], name: "index_bookings_on_detail_id", using: :btree
