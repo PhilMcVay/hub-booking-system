@@ -9,8 +9,67 @@
   </head>
 
   <body>
+
+    <div class = 'container'>
+    <nav>
+      <ul class = 'top-nav'>
+        <li><img src='/HubLogo.png' height="120px"></li>
+        <li ><a class='logoin' href="logoin">Login</a></li>
+
+      </nav>
+
+    <br>
+    <nav>
+      <ul>
+        <li><a href="#">VIEW CALENDAR
+          <select>
+            <ptgroup label="Rate">
+              <option>Day</option>
+              <option>Week</option>
+              <option>Month</option>
+
+          </select>
+        </a></li>
+
+        <li> <a href="#">AREA
+          <select>
+            <ptgroup label="area">
+              <option>Digital Jersey Hub</option>
+              <option>Edison</option>
+              <option>Breakout Zone</option>
+              <option>Skills Zone</option>
+              <option>Sandberg</option>
+              <option>Jobs</option>
+              <option>Gates</option>
+
+          </select></a></li>
+        <li><a href="#">BOOK NOW </a></li>
+      </ul>
+    </nav>
+  </div>
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
+    <nav>
+      <ul class='sub-nav'>
+        <li> <a href="#"> <img src="/Edison.jpg" width="50px" height="50px">
+          Edison</a> </li>
+        <li><a href="#"> <img src ="/BreakoutZone.jpg" width="50px" height="50px" > Breakout</a> </li>
+        <li><a href="#"> <img src ='/SkillZone.jpg' width="50px" height="50px"> Skils Zone</a></li>
+        <li><a href="#"> <img src ='/Sandberg.jpg' width="50px" height="50px"> Sandberg</a></li>
+        <li><a href="#"> <img src ='/Jobs.jpg' width="50px" height="50px"> Jobs</a></li>
+        <li><a href="#"> <img src ='/Gates.jpg' width="50px" height="50px"> Gates</a></li>
+      </ul>
+  </nav>
+
+    <footer>
+      <p class = 'footer'>
+         <a>About Us </a> <br><a>Contact Us </a> <br><a>Terms and Conditions </a> <br><a> Privacy Policy </a>
+      </p>
+      <p>Digital Jersey Hub, Block 3, The Forum, <br>Grenville Street, St Helier, <br>Jersey JE2 4UF.</p>
+      <p>Phone: 01534 828 585 <br>Email:<a>info@digitalhub.je</a></p>
+    </footer>
+
   </body>
 </html>
