@@ -1,16 +1,10 @@
 class DetailsController < ApplicationController
-  before_action :set_detail, :set_booking, only: [:show, :edit, :update, :destroy]
-
-  # GET /details
-  # GET /details.json
-  def index
-    @details = Detail.all
-    @booking = Booking.find(params[:booking_id])
-  end
+  before_action :set_detail, only: [:edit, :show, :update, :destroy]
 
   # GET /details/1
   # GET /details/1.json
   def show
+    @booking = Booking.find(params[:booking_id])
   end
 
   # GET /details/new
@@ -21,6 +15,8 @@ class DetailsController < ApplicationController
 
   # GET /details/1/edit
   def edit
+    @booking = Booking.find(params[:booking_id])
+    @detail = @booking.details.find(params[:id])
   end
 
   # POST /details
@@ -32,8 +28,9 @@ class DetailsController < ApplicationController
 
     respond_to do |format|
       if @detail.save
-        format.html { redirect_to @detail, notice: 'Detail was successfully created.' }
+        format.html { redirect_to @booking, notice: 'Detail was successfully created.' }
         format.json { render :show, status: :created, location: @detail }
+
       else
         format.html { render :new }
         format.json { render json: @detail.errors, status: :unprocessable_entity }
@@ -46,7 +43,7 @@ class DetailsController < ApplicationController
   def update
     respond_to do |format|
       if @detail.update(detail_params)
-        format.html { redirect_to @detail, notice: 'Detail was successfully updated.' }
+        format.html { redirect_to booking_detail_path, notice: 'Detail was successfully updated.' }
         format.json { render :show, status: :ok, location: @detail }
       else
         format.html { render :edit }

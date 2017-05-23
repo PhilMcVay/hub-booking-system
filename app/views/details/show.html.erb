@@ -25,10 +25,5 @@
   <%= @detail.other_notes %>
 </p>
 
-<p>
-  <strong>Booking:</strong>
-  <%= @detail.booking_id %>
-</p>
-
-<%= link_to 'Edit', edit_detail_path(@detail) %> |
-<%= link_to 'Back', details_path %>
+<%= link_to 'Edit', edit_booking_detail_path(@booking) %> |
+<%= link_to 'Back', booking_path(@booking) %>

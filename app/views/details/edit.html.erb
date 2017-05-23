@@ -1,6 +1,6 @@
 <h1>Editing Detail</h1>
 
-<%= render 'form', detail: @detail %>
+<%= render 'form', detail: @detail, booking: @booking %>
 
-<%= link_to 'Show', @detail %> |
-<%= link_to 'Back', booking_details_path %>
+<%= link_to 'Show', booking_detail_path %> |
+<%= link_to 'Back', booking_path(@booking) %>
