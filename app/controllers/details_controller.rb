@@ -5,7 +5,6 @@ class DetailsController < ApplicationController
   # GET /details/1.json
   def show
     @booking = Booking.find(params[:booking_id])
-    @detail = @booking.details.find(params[:id])
   end
 
   # GET /details/new
