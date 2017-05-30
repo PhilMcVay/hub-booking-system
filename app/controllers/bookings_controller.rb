@@ -31,7 +31,7 @@ class BookingsController < ApplicationController
 
     respond_to do |format|
       if @booking.save
-        format.html { redirect_to @booking, notice: 'Booking was successfully created.' }
+        format.html { redirect_to new_booking_detail_path(@booking), notice: 'Room available. Please provide your details.' }
         format.json { render :show, status: :created, location: @booking }
       else
         format.html { render :new }
@@ -43,6 +43,8 @@ class BookingsController < ApplicationController
   # PATCH/PUT /bookings/1
   # PATCH/PUT /bookings/1.json
   def update
+    @areas = Area.all
+
     respond_to do |format|
       if @booking.update(booking_params)
         format.html { redirect_to @booking, notice: 'Booking was successfully updated.' }
