@@ -42,6 +42,8 @@ gem "paperclip", "~> 5.0.0"
 gem 'validates_overlap'
 # For Heroku database
 gem "figaro"
+#cancancan
+gem 'cancancan', '~> 1.10'
 
 
 
