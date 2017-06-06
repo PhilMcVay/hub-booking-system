@@ -3,13 +3,19 @@ class Ability
 
   def initialize(user)
        user ||= User.new # guest user (not logged in)
-       if user.role == "admin"
+       if user.role == "superadmin"
+        can :manage, :all
+        #change user's roles
+       elsif user.role == "admin"
          can :manage, :all
+         can :approve, Booking
         elsif user.role == "staff"
-         can [:read, :create, :update], [Booking]
-       else
-         can [:create], [Booking]
-         can [:read], [Area]
+         #can :manage, :all
+         can [:read, :create, :update], [Booking, Area]
+       else #user.role == "nil"
+         can [:create, :read], [Booking]
+         #can :read, :all
+         #can :read, [Area, User, Booking]
        end
     # Define abilities for the passed in user here. For example:
     #

@@ -27,8 +27,8 @@
   </div>
   
   <div>
-<%= f.collection_select :role, User::ROLES, :to_s, :humanize %>
-</div>
+    <%= f.collection_select :role, User::ROLES, :to_s, :humanize %>
+  </div>
 
   <div class="actions">
     <%= f.submit "Sign up" %>

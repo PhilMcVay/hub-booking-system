@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   			sessions: 'users/sessions',
   			registrations: 'users/registrations' }
   
+  #superadmin edits other users
+  #devise_for :users,: :path_prefix => 'my'
+  #resources :users
+  
   resources :resources
   resources :areas
 
