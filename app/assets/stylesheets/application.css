@@ -14,81 +14,148 @@
  *= require_self
  */
 
- .container {
-       display: flex;
-       flex-flow: row wrap;
-       justify-content: space-between;
-       width: 100%;
-       flex-direction: row;
 
+% flex
+dislay: flex
+/*  logo and login menu        */
+.topNav
+{
+    @extend %flex
+    text-decoration: none;
 
-
-  }
-
-
-  div ul {
-
-     list-style: none;
-     text-decoration: none;
-      color: #5bc2ee;
-      background-color: #0089b9;
-
-  }
- .navigation {
-
- text-decoration: none;
-
- }
-
- .top-nav {
-   display: flex;
-   flex-flow: row wrap;
-   list-style: none;
-
-   justify-content: space-between;
-   font-weight: bold;
-   color: black;
-   background-color: #fff;
- }
- .main-nav {
-
-   display: flex;
-   flex-flow: row wrap;
-   list-style: none;
-   justify-content: space-between;
-   text-decoration: none;
-   background-color: #0089b9;
-
-     margin: 0;
-     padding: 0;
-
-    color: #d0d9de;
-
+    list-style: none;
     font-weight: bold;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .topNav a
+  {
+    @extend %flex
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
 
- }
+    text-align: center;
 
- .sub-nav {
 
+  }
+
+.topNav_item
+{
+  @extend %flex
+  text-decoration: none;
+  list-style: none;
+  font-weight: bold;
+  flex-wrap: wrap;
+}
+
+.flex-item a
+{
+
+}
+
+.logo
+{
+    width: 10px
+  margin: 0 5px;
+}
+/* log and login menu end */
+
+/* nav menu areas and book */
+.navMenu
+{
+  @extend %flex
+  flex-wrap: wrap;
+}
+
+
+.navMenu_item
+{
+    @extend %flex
+  text-decoration: none;
+  display: inline-block;
+  list-style: none;
+  font-weight: bold;
+  flex-wrap: wrap;
+}
+.navMenu_item_button
+{
+    @extend %flex
+  text-decoration: none;
+  display: inline-block;
+  list-style: none;
+  font-weight: bold;
+  background-color: #5bc2ee;
+}
+
+.button_book
+{
+  text-decoration: none;
+  list-style: none;
+}
+
+.navMenu_item a
+{
+  text-decoration: none;
+  color: inherit;
+  padding:20px;
+  margin: inherit;
+  text-align: center;
+  background-color:#0089b9;
+}
+
+.navMenu_item_button a
+{
+  text-decoration: none;
+  color: inherit;
+  padding:20px;
+  margin: inherit;
+  text-align: center;
+  background-color:#0089b9;
+}
+/* end nav  */
+ .sub-nav
+ {
    display: flex;
    flex-flow: row wrap;
    list-style: none;
    justify-content: space-around;
 
    font-weight: bold;
-   background-color: #0089B9;
+   background-color: #0089b9;
+   color: white;
+
  }
 
- ul li {
+.sub-nav a
+{
+  display:block;
+}
 
+ img {
+   vertical-align: inherit;
+ }
+
+ .navFooter
+ {
+   display: flex;
+ }
+
+ .footerItem {
+   display: flex;
+ }
+
+ ul li
+ {
    color: #d0d9de;
  }
 
- a {
+ a
+ {
    text-decoration: none;
    color: black;
  }
- a hover {
-
+ a: hover
+ {
    background-color: white;
  }

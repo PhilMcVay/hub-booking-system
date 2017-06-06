@@ -1,3 +1,27 @@
 // Place all the styles related to the Areas controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1 {
+
+
+
+}
+
+.area_container
+{
+  display:flex;
+  flex-direction: row;
+}
+
+.area
+{
+
+}
+
+.area_item
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}

@@ -11,18 +11,19 @@
   <body>
 
     <div>
-    <nav>
-      <ul class = 'top-nav'>
-        <li><img src='/HubLogo.png' height="120px"></li>
-        <li><a class='flex-item' href="#">Login</a></li>
+    <nav class = 'topNav'>
+       <ul class='topNav_item'>
+         <li><a href="https://www.digitalhub.je"><img src ='/HubLogo.png' width="50px" height="50px"><!--<img src="<%= asset_path "Hub logo.png"%>" class="logo"alt="/HubLogo.png"/> --></a></li>
+        <li><a href="#">Login</a></li>
       </ul>
 
       </nav>
 
     <br>
-    <nav class ='main-nav'>
+    <div class = "navMenu">
+
       <ul>
-        <li class='flex-item'><a>VIEW CALENDAR</a>
+        <li class='navMenu_item'><a>VIEW CALENDAR</a>
           <select>
             <ptgroup label="Rate">
               <option>Day</option>
@@ -30,23 +31,39 @@
               <option>Month</option>
 
           </select>
-        </li>
 
-        <li class='flex-item'> <a>AREA</a>
-          <select>
+
+        <!--
+
+        <div class ="dropdown">
+          <button class="dropbtn">Dropdown</button>
+          <div class="dropdown-content">
+            <a href="#">Day</a>
+            <a href="#">Week</a>
+            <a href="#">Month</a>
+          </div>-->
+      <li class='navMenu_item'> <%= link_to "AREA", new_area_path %>
+
+        <select name= "areas[area_id]">
+          <% Area.all.each do |area|%>
+          <option value="area.id %>"><%= link_to "#{area.name}", area_path(area) %></option>
+          <% end %>
+        </select>
+          <!--<select>
             <ptgroup label="area">
               <option>Digital Jersey Hub</option>
-              <option>Edison</option>
+              <option>Edison <a><%= link_to "Edison", area_path(4) %></a></option>
               <option>Breakout Zone</option>
               <option>Skills Zone</option>
               <option>Sandberg</option>
               <option>Jobs</option>
               <option>Gates</option>
 
-          </select></li>
-        <li class='flex-item'><a href="#">BOOK NOW </a></li>
+          </select></li> -->
+        <li class="navMenu_item_button"><a class="button_book"> <%= link_to "BOOK NOW", new_booking_path %> </a></li>
       </ul>
     </nav>
+  </div>
   </div>
 
     <p class="notice"><%= notice %></p>
@@ -54,24 +71,28 @@
     <%= yield %>
     <nav>
       <ul class='sub-nav'>
-        <li> <a href="#"> <img src="/Edison.jpg" width="50px" height="50px">
-          Edison</a> </li>
-        <li><a href="#"> <img src ="/BreakoutZone.jpg" width="50px" height="50px" > Breakout Zone</a> </li>
-        <li><a href="#"> <img src ='/SkillZone.jpg' width="50px" height="50px"> Skills Zone</a></li>
-        <li><a href="#"> <img src ='/Sandberg.jpg' width="50px" height="50px"> Sandberg</a></li>
-        <li><a href="#"> <img src ='/Jobs.jpg' width="50px" height="50px"> Jobs</a></li>
-        <li><a href="#"> <img src ='/Gates.jpg' width="50px" height="50px"> Gates</a></li>
+        <li> <a href="#"> <img src="/Edison.jpg" width="50px" height="50px"><%= link_to "Edison", area_path(4) %>
+          </a> </li>
+        <li> <img src ="/BreakoutZone.jpg" width="50px" height="50px"> <%= link_to "Breakout Zone", area_path(2) %> </li>
+        <li><a href="#"> <img src ='/SkillZone.jpg' width="50px" height="50px"> <%= link_to "Skills Zone", area_path(3) %> </a></li>
+        <li><a href="#"> <img src ='/Sandberg.jpg' width="50px" height="50px"> <%= link_to "Sandberg", area_path(5) %></a></li>
+        <li><a href="#"> <img src ='/Jobs.jpg' width="50px" height="50px"> <%= link_to "Jobs", area_path(6) %></a></li>
+        <li><a href="#"> <img src ='/Gates.jpg' width="50px" height="50px"><%= link_to "Gates", area_path(7) %></a></li>
       </ul>
   </nav>
 
-    <footer>
-      <ul><li>
-      <p class = 'footer'>
-         <a href='#'>About Us </a> <br><a href='#'>Contact Us </a> <br><a href='#'>Terms and Conditions </a> <br><a href='#'> Privacy Policy </a>
-      </p>
-      <p>Digital Jersey Hub, Block 3, The Forum, <br>Grenville Street, St Helier, <br>Jersey JE2 4UF.</p>
-      <p>Phone: 01534 828 585 <br>Email:<a href='#'>info@digitalhub.je</a></p>
-    </li></ul>
+    <footer class="navFooter">
+      <ul >
+        <li class = 'footerItem'>
+          <p><a href='https://www.digitalhub.je/about-us/'>About Us </a> <br><a href='#'>Contact Us </a> <br><a href='#'>Terms and Conditions </a> <br><a href='#'> Privacy Policy</a></p>
+        </li>
+        <li clsss="footerItem">
+          <p>Digital Jersey Hub, Block 3, The Forum, <br>Grenville Street, St Helier, <br>Jersey JE2 4UF.</p>
+        </li>
+        <li class ='footerItem'>
+          <p>Phone: 01534 828 585 <br>Email:<a href="mailto:info@digitalhub.je">info@digitalhub.je</a></p>
+        </li>
+      </ul>
     </footer>
 
   </body>

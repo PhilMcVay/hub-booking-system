@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
-
+<!--
 <p>
-  <strong>Name:</strong>
+  <strong>AREA:</strong>
   <%= @area.name %>
 </p>
 
@@ -9,16 +9,49 @@
   <strong>Capacity:</strong>
   <%= @area.capacity %>
 </p>
-
+<!-- addd area description to db and html,css styling --
 <p>
-  <strong>Type:</strong>
+  <strong></strong>
   <%= @area.type %>
 </p>
 
 <p>
-  <strong>Image:</strong>
-  <%= image_tag @area.image.url(:thumb) %>
+  <strong></strong>
+  <%= image_tag @area.image.url(:medium) %>
 </p>
+<ul>
+  <li class="navMenu_item_button"><a class="button book"> <%= link_to "BOOK NOW", new_booking_path %> </a></li>
+<img />
+</ul> -->
+
+
+
+
+<div class="area_container">
+  <ul class="area">
+    <li class="area_item">
+      <strong>AREA:</strong>
+      <%= @area.name %>
+    </li>
+
+    <li class="area_item">
+      <strong>Capacity:</strong>
+      <%= @area.capacity %>
+    </li>
+    <!-- addd area description to db and html,css styling -->
+
+    <li class= "area_item"><a class="button_book"> <%= link_to "BOOK NOW", new_booking_path %> </a></li>
+    <li class="area_item" >
+      <strong></strong>
+      <%= @area.type %>
+    </li>
+
+  </ul>
+  <p>
+    <strong></strong>
+    <%= image_tag @area.image.url(:medium) %>
+  </p>
+</div>
 
 <%= link_to 'Edit', edit_area_path(@area) %> |
 <%= link_to 'Back', areas_path %>
