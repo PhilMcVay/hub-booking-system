@@ -28,7 +28,7 @@
 
   <div class="field">
     <%= f.label :membership %>
-    <%= f.text_field :membership %>
+    <%= f.select :membership, ["Individual", "Small Business", "Enterprise", "Staff"], { :include_blank => true } %>
   </div>
 
   <div class="field">
