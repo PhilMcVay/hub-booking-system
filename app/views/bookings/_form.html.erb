@@ -11,6 +11,8 @@
     </div>
   <% end %>
 
+<div class="form">
+
   <div class="field">
     <%= f.label :no_of_people %>
     <%= f.select :no_of_people, (1..150), { :include_blank => true } %>
@@ -44,5 +46,5 @@
   <div class="actions">
     <%= f.submit "Check Availability" %>
   </div>
-
+</div>
 <% end %>

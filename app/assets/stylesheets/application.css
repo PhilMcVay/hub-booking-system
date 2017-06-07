@@ -22,7 +22,7 @@
        justify-content: space-between;
        width: 100%;
        flex-direction: column;
-
+       font-family: 'DINOT-Regular', sans-serif;
 
 
   }
@@ -67,7 +67,7 @@
     color: #d0d9de;
 
     font-weight: bold;
-
+  overflow: visible;
  }
 
  .sub-nav {
@@ -79,6 +79,7 @@
 
    font-weight: bold;
    background-color: #0089B9;
+   overflow: visible;
  }
 
  ul li {

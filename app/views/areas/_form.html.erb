@@ -11,6 +11,14 @@
     </div>
   <% end %>
 
+<div class="form">
+
+  <ul class="tab-group">
+    <li class="tab active"><a href="#adduser">Add User</a></li>
+    <li class="tab"><a href="#modifyuser">Modify User</a></li>
+    <li class="tab"><a href="#deleteuser">Delete User</a></li>
+  </ul>
+  
   <div class="field">
     <%= f.label :name %>
     <%= f.text_field :name %>
@@ -34,4 +42,6 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+
+</div>
 <% end %>
