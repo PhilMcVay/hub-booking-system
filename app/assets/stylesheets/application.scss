@@ -151,6 +151,7 @@ html, body {
  .sub-nav
  {
    margin: 0;
+   padding: 0;
    display: flex;
    flex-flow: row wrap;
    list-style: none;
@@ -162,11 +163,14 @@ html, body {
 
 .sub-nav a
 {
-  display:block;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: white;
 }
 
 .sub-nav img {
-  height: 50px;
+  height: 90px;
 }
 
  img {
@@ -180,6 +184,12 @@ html, body {
      display: flex;
      width: 100%;
      justify-content: space-between;
+     align-items: center;
+     margin: 5px;
+   }
+   p {
+     margin: 20px;
+
    }
 
  }
