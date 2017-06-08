@@ -11,7 +11,7 @@ h1 {
 .area_container
 {
   display:flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
 }
 
 .area
@@ -22,6 +22,11 @@ h1 {
 .area_item
 {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  color: black;
+  justify-content: flex-start;
+}
+.image_item
+{
+  display: flex;
+  justify-content: flex-start;
 }

@@ -10,14 +10,16 @@
 
   <body>
 
-    <div>
+    <div class ="container" >
     <nav class = 'topNav'>
        <ul class='topNav_item'>
-         <li><a href="https://www.digitalhub.je"><img src ='/HubLogo.png' width="50px" height="50px"><!--<img src="<%= asset_path "Hub logo.png"%>" class="logo"alt="/HubLogo.png"/> --></a></li>
+         <li><img src ='/HubLogo.png' width="50px" height="50px"></li>
+           <!--<img src="<%= asset_path "Hub logo.png"%>" class="logo"alt="/HubLogo.png"/><a href="https://www.digitalhub.je"> --></a>
         <li><a href="#">Login</a></li>
       </ul>
 
       </nav>
+    </div>
 
     <br>
     <div class = "navMenu">
@@ -71,8 +73,7 @@
     <%= yield %>
     <nav>
       <ul class='sub-nav'>
-        <li> <a href="#"> <img src="/Edison.jpg" width="50px" height="50px"><%= link_to "Edison", area_path(4) %>
-          </a> </li>
+        <li> <a href=" <img src="/Edison.jpg" width="50px" height="50px"><%= link_to "Edison", area_path(4) %> "></a> </li>
         <li> <img src ="/BreakoutZone.jpg" width="50px" height="50px"> <%= link_to "Breakout Zone", area_path(2) %> </li>
         <li><a href="#"> <img src ='/SkillZone.jpg' width="50px" height="50px"> <%= link_to "Skills Zone", area_path(3) %> </a></li>
         <li><a href="#"> <img src ='/Sandberg.jpg' width="50px" height="50px"> <%= link_to "Sandberg", area_path(5) %></a></li>
@@ -80,20 +81,23 @@
         <li><a href="#"> <img src ='/Gates.jpg' width="50px" height="50px"><%= link_to "Gates", area_path(7) %></a></li>
       </ul>
   </nav>
-
+<div>
     <footer class="navFooter">
       <ul >
-        <li class = 'footerItem'>
-          <p><a href='https://www.digitalhub.je/about-us/'>About Us </a> <br><a href='#'>Contact Us </a> <br><a href='#'>Terms and Conditions </a> <br><a href='#'> Privacy Policy</a></p>
-        </li>
-        <li clsss="footerItem">
-          <p>Digital Jersey Hub, Block 3, The Forum, <br>Grenville Street, St Helier, <br>Jersey JE2 4UF.</p>
-        </li>
-        <li class ='footerItem'>
-          <p>Phone: 01534 828 585 <br>Email:<a href="mailto:info@digitalhub.je">info@digitalhub.je</a></p>
-        </li>
+        <li class = 'footerItem'><a href='https://www.digitalhub.je/about-us/'>About Us </a> </li>
+        <li class = 'footerItem'><a href='https://www.digitalhub.je/contact-us/'> Contact Us </a> </li>
+        <li class = 'footerItem'><a href='https://www.digitalhub.je/terms-and-conditions/'>Terms and Conditions </a> </li>
+        <li class = 'footerItem'><a href='https://www.digitalhub.je/privacy-policy/'> Privacy Policy</a></li>
+      </ul>
+      <ul>
+        <li clsss= 'footerItem'> Digital Jersey Hub, Block 3, The Forum, <br>Grenville Street, St Helier, <br>Jersey JE2 4UF.</li>
+      </ul>
+      <ul>
+        <li class ='footerItem'> Phone: 01534 828 585 </li>
+        <li class ='footerItem'><a href="mailto:info@digitalhub.je"> Email :info@digitalhub.je</a></li>
       </ul>
     </footer>
+  </div>
 
   </body>
 </html>

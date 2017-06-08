@@ -30,13 +30,11 @@
 <div class="area_container">
   <ul class="area">
     <li class="area_item">
-      <strong>AREA:</strong>
-      <%= @area.name %>
+      <strong>AREA:</strong><%= @area.name %>
     </li>
 
     <li class="area_item">
-      <strong>Capacity:</strong>
-      <%= @area.capacity %>
+      <strong>Capacity:</strong><%= @area.capacity %>
     </li>
     <!-- addd area description to db and html,css styling -->
 
@@ -47,7 +45,7 @@
     </li>
 
   </ul>
-  <p>
+  <p class="image_item">
     <strong></strong>
     <%= image_tag @area.image.url(:medium) %>
   </p>

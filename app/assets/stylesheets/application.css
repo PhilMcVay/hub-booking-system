@@ -18,6 +18,13 @@
 % flex
 dislay: flex
 /*  logo and login menu        */
+.container
+{
+  @extend %flex
+  display: block;
+  justify-content: space-between;
+}
+
 .topNav
 {
     @extend %flex
@@ -28,6 +35,7 @@ dislay: flex
     flex-wrap: wrap;
     justify-content: space-between;
   }
+
   .topNav a
   {
     @extend %flex
@@ -141,10 +149,16 @@ dislay: flex
    display: flex;
  }
 
- .footerItem {
+ .footerItem
+ {
    display: flex;
+
  }
 
+.footerItem a
+{
+display: block;
+}
  ul li
  {
    color: #d0d9de;
@@ -154,8 +168,4 @@ dislay: flex
  {
    text-decoration: none;
    color: black;
- }
- a: hover
- {
-   background-color: white;
  }
