@@ -1,24 +1,25 @@
 <p id="notice"><%= notice %></p>
+<div class="form">
+  <p>
+    <strong>Name:</strong>
+    <%= @area.name %>
+  </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @area.name %>
-</p>
+  <p>
+    <strong>Capacity:</strong>
+    <%= @area.capacity %>
+  </p>
 
-<p>
-  <strong>Capacity:</strong>
-  <%= @area.capacity %>
-</p>
+  <p>
+    <strong>Type:</strong>
+    <%= @area.type %>
+  </p>
 
-<p>
-  <strong>Type:</strong>
-  <%= @area.type %>
-</p>
+  <p>
+    <strong>Image:</strong>
+    <%= image_tag @area.image.url(:thumb) %>
+  </p>
 
-<p>
-  <strong>Image:</strong>
-  <%= image_tag @area.image.url(:thumb) %>
-</p>
-
-<%= link_to 'Edit', edit_area_path(@area) %> |
-<%= link_to 'Back', areas_path %>
+  <%= link_to 'Edit', edit_area_path(@area) %> |
+  <%= link_to 'Back', areas_path %>
+</div>

@@ -169,6 +169,7 @@ input, textarea {
 textarea {
   border:2px solid $gray-light;
   resize: vertical;
+  background:rgba($form-bg,0.7);
 }
 
 .field-wrap {
@@ -210,11 +211,24 @@ textarea {
   }
 }
 
+.actions a {
+
+}
+
 .form input
 {
   border-color: #0089b9;
+  /*background-color: #bee3f8;*/
+  background-color: #fff;
+
+  color: black;
+}
+
+.button
+{
+  border-color: #0089b9;
   background-color: #bee3f8;
-  color: white;
+  color: #fff;
 }
 
 .actions input
@@ -222,7 +236,10 @@ textarea {
   background-color: #0089b9;
   padding: 15px;
   border: solid 1px #99DBF8;
-
+  /*color: black;*/
+  &:hover, &:focus {
+    background:$main-light;
+  }
 }
 
 .button-block {

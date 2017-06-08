@@ -1,34 +1,42 @@
 <p id="notice"><%= notice %></p>
+<div class="form">
 
-<p>
-  <strong>Start time:</strong>
-  <%= @booking.start_time.strftime("%a #{@booking.start_time.day.ordinalize} %b" + " || " + "%H:%M")  %>
-</p>
+  <h1>Confirmation of the booking</p>
 
-<p>
-  <strong>End time:</strong>
-  <%= @booking.end_time.strftime("%a #{@booking.start_time.day.ordinalize} %b" + " || " + "%H:%M")  %>
-</p>
+    <div class="details">
+      <p>
+        <strong>Start time:</strong>
+        <%= @booking.start_time.strftime("%a #{@booking.start_time.day.ordinalize} %b" + " || " + "%H:%M")  %>
+      </p>
 
-<p>
-  <strong>No of people:</strong>
-  <%= @booking.no_of_people %>
-</p>
+      <p>
+        <strong>End time:</strong>
+        <%= @booking.end_time.strftime("%a #{@booking.start_time.day.ordinalize} %b" + " || " + "%H:%M")  %>
+      </p>
 
-<p>
-  <strong>Resource:</strong>
-  <%= @booking.resource %>
-</p>
+      <p>
+        <strong>No of people:</strong>
+        <%= @booking.no_of_people %>
+      </p>
 
-<p>
-  <strong>Status:</strong>
-  <%= @booking.status %>
-</p>
+      <p>
+        <strong>Resource:</strong>
+        <%= @booking.resource %>
+      </p>
 
-<p>
-  <strong>Area:</strong>
-  <%= @booking.area.name %>
-</p>
+      <p>
+        <strong>Status:</strong>
+        <%= @booking.status %>
+      </p>
 
-<%= link_to 'Edit', edit_booking_path(@booking) %> |
-<%= link_to 'Back', bookings_path %>
+      <p>
+        <strong>Area:</strong>
+        <%= @booking.area.name %>
+      </p>
+
+    </div>
+
+      <%= link_to 'Edit', edit_booking_path(@booking) %> |
+      <%= link_to 'Back', bookings_path %>
+    
+</div>
