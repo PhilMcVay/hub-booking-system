@@ -35,6 +35,7 @@ html, body {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    height: 100px;
   }
   .topNav a
   {
@@ -43,9 +44,10 @@ html, body {
     text-decoration: none;
     text-align: center;
     border: 1px solid #0082C8;
+    padding: 8px;
   }
 
-  a
+  .navMenu_item a
   {
     text-decoration: none;
     color: black;
@@ -65,8 +67,17 @@ html, body {
   width: 100%;
 }
 
+.topNav_item {
+  margin: 10px 0;
+  padding: 0 10px;
+}
+
 .topNav_item li {
   justify-content: space-between;
+}
+
+.topNav_item img {
+  height: 70px;
 }
 
 .flex-item a
@@ -89,6 +100,10 @@ html, body {
   background-color: #374EA1;
 }
 
+.navMenu ul {
+  width: 100%;
+}
+
 
 .navMenu_item
 {
@@ -101,7 +116,7 @@ html, body {
 }
 .navMenu_item_button
 {
-    @extend .flex;
+  @extend .flex;
   text-decoration: none;
   display: inline-block;
   list-style: none;
@@ -118,8 +133,8 @@ html, body {
 .navMenu_item a
 {
   text-decoration: none;
-  padding:20px;
-  margin: inherit;
+  padding: 10px;
+  margin-left: 6px;
   text-align: center;
 }
 
@@ -135,20 +150,23 @@ html, body {
 /* end nav  */
  .sub-nav
  {
+   margin: 0;
    display: flex;
    flex-flow: row wrap;
    list-style: none;
    justify-content: space-around;
-
    font-weight: bold;
-   background-color: #0089b9;
+   background-color: #374EA1;
    color: white;
-
  }
 
 .sub-nav a
 {
   display:block;
+}
+
+.sub-nav img {
+  height: 50px;
 }
 
  img {
@@ -158,6 +176,12 @@ html, body {
  .navFooter
  {
    display: flex;
+   ul {
+     display: flex;
+     width: 100%;
+     justify-content: space-between;
+   }
+
  }
 
  .footerItem {
