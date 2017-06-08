@@ -14,39 +14,59 @@
  *= require_self
  */
 
+* {
+  font-family: 'DINOT-Regular', sans-serif;
+}
 
-% flex
-dislay: flex
+html, body {
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+}
 /*  logo and login menu        */
 .topNav
 {
-    @extend %flex
+    @extend.flex;
     text-decoration: none;
-
     list-style: none;
     font-weight: bold;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
   }
   .topNav a
   {
-    @extend %flex
+    @extend.flex;
     display: inline-block;
     text-decoration: none;
-    color: inherit;
-
     text-align: center;
+    border: 1px solid #0082C8;
+  }
 
-
+  a
+  {
+    text-decoration: none;
+    color: black;
+    padding: 8px;
+    background-color: white;
   }
 
 .topNav_item
 {
-  @extend %flex
+  @extend.flex;
   text-decoration: none;
   list-style: none;
   font-weight: bold;
   flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.topNav_item li {
+  justify-content: space-between;
 }
 
 .flex-item a
@@ -56,7 +76,7 @@ dislay: flex
 
 .logo
 {
-    width: 10px
+    width: 10px;
   margin: 0 5px;
 }
 /* log and login menu end */
@@ -64,14 +84,15 @@ dislay: flex
 /* nav menu areas and book */
 .navMenu
 {
-  @extend %flex
+  @extend .flex;
   flex-wrap: wrap;
+  background-color: #374EA1;
 }
 
 
 .navMenu_item
 {
-    @extend %flex
+    @extend .flex;
   text-decoration: none;
   display: inline-block;
   list-style: none;
@@ -80,7 +101,7 @@ dislay: flex
 }
 .navMenu_item_button
 {
-    @extend %flex
+    @extend .flex;
   text-decoration: none;
   display: inline-block;
   list-style: none;
@@ -97,11 +118,9 @@ dislay: flex
 .navMenu_item a
 {
   text-decoration: none;
-  color: inherit;
   padding:20px;
   margin: inherit;
   text-align: center;
-  background-color:#0089b9;
 }
 
 .navMenu_item_button a
@@ -148,14 +167,4 @@ dislay: flex
  ul li
  {
    color: #d0d9de;
- }
-
- a
- {
-   text-decoration: none;
-   color: black;
- }
- a: hover
- {
-   background-color: white;
  }

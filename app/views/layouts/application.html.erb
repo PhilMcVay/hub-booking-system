@@ -60,7 +60,7 @@
               <option>Gates</option>
 
           </select></li> -->
-        <li class="navMenu_item_button"><a class="button_book"> <%= link_to "BOOK NOW", new_booking_path %> </a></li>
+        <a><%= link_to "BOOK NOW", new_booking_path %> </a>
       </ul>
     </nav>
   </div>
@@ -68,7 +68,9 @@
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+
     <%= yield %>
+
     <nav>
       <ul class='sub-nav'>
         <li> <a href="#"> <img src="/Edison.jpg" width="50px" height="50px"><%= link_to "Edison", area_path(4) %>
