@@ -44,6 +44,7 @@ html, body {
     justify-content: space-between;
     align-items: center;
     height: 100px;
+    width: 100%;
   }
 
   .topNav a
@@ -190,7 +191,6 @@ html, body {
  {
    display: flex;
    ul {
-     display: flex;
      width: 100%;
      justify-content: space-between;
      align-items: center;

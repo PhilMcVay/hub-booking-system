@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html>
   <head>
     <title>HubBookingSystem</title>
@@ -15,7 +15,7 @@
        <ul class='topNav_item'>
          <li><img src ='/HubLogo.png' width="50px" height="50px"></li>
            <!--<img src="<%= asset_path "Hub logo.png"%>" class="logo"alt="/HubLogo.png"/><a href="https://www.digitalhub.je"> --></a>
-        <li><a href="#">Login</a></li>
+        <li><%= link_to "LOGIN", new_user_session_path %></li>
       </ul>
 
       </nav>
@@ -62,6 +62,9 @@
               <option>Gates</option>
 
           </select></li> -->
+        <%= link_to "ADD AREA", new_area_path %>
+        <%= link_to "ADD RESOURCE", new_resource_path %>
+        <%= link_to "ADD USER", new_user_registration_path %>
         <%= link_to "BOOK NOW", new_booking_path %>
       </ul>
     </nav>
@@ -75,12 +78,12 @@
 
     <nav>
       <ul class='sub-nav'>
-        <li> <a href="#"> <img src="/Edison.jpg" width="50px" height="50px"><%= link_to "Edison", area_path(4) %></a> </li>
-        <li> <img src ="/BreakoutZone.jpg" width="50px" height="50px"> <%= link_to "Breakout Zone", area_path(2) %> </li>
-        <li><a href="#"> <img src ='/SkillZone.jpg' width="50px" height="50px"> <%= link_to "Skills Zone", area_path(3) %> </a></li>
-        <li><a href="#"> <img src ='/Sandberg.jpg' width="50px" height="50px"> <%= link_to "Sandberg", area_path(5) %></a></li>
-        <li><a href="#"> <img src ='/Jobs.jpg' width="50px" height="50px"> <%= link_to "Jobs", area_path(6) %></a></li>
-        <li><a href="#"> <img src ='/Gates.jpg' width="50px" height="50px"><%= link_to "Gates", area_path(7) %></a></li>
+        <li><img src="/Edison.jpg"><%= link_to "Edison", area_path(4) %></li>
+        <li><img src ="/BreakoutZone.jpg"> <%= link_to "Breakout Zone", area_path(2) %> </li>
+        <li><img src ='/SkillZone.jpg'> <%= link_to "Skills Zone", area_path(3) %> </li>
+        <li><img src ='/Sandberg.jpg'> <%= link_to "Sandberg", area_path(5) %></li>
+        <li><img src ='/Jobs.jpg'> <%= link_to "Jobs", area_path(6) %></li>
+        <li><img src ='/Gates.jpg'><%= link_to "Gates", area_path(7) %></li>
       </ul>
   </nav>
 <div>
