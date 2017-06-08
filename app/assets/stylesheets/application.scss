@@ -28,7 +28,7 @@ html, body {
 /*  logo and login menu        */
 .container
 {
-  @extend %flex
+  @extend.flex;
 
 
   justify-content: space-between;
@@ -58,7 +58,7 @@ html, body {
   {
     text-decoration: none;
     color: black;
-    padding: 8px;
+    padding: 0;
     background-color: white;
   }
 
@@ -93,7 +93,7 @@ html, body {
 /* nav menu areas and book */
 .navMenu
 {
-  @extend .flex
+  @extend .flex;
   flex-wrap: wrap;
   background-color: #374EA1;
 }
@@ -183,7 +183,7 @@ display: block;
  {
    color: #d0d9de;
  }
-<<<<<<< HEAD:app/assets/stylesheets/application.css
+
 
  a
  {
