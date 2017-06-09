@@ -13,7 +13,8 @@ class Ability
          #can :manage, :all
          can [:read, :create, :update], [Booking, Area]
        else #user.role == "nil"
-         can [:create, :read], [Booking]
+        can :manage, :all
+         #can [:create, :read], [Booking, Area]
          #can :read, :all
          #can :read, [Area, User, Booking]
        end
