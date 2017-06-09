@@ -22,7 +22,17 @@
        <ul class='topNav_item'>
          <li><img src ='/HubLogo.png' width="50px" height="50px"></li>
            <!--<img src="<%= asset_path "Hub logo.png"%>" class="logo"alt="/HubLogo.png"/><a href="https://www.digitalhub.je"> --></a>
-        <li><%= link_to "LOGIN", new_user_session_path %></li>
+        
+          <% if user_signed_in? %>
+            <li>
+            <%= link_to('Logout', destroy_user_session_path) %>        
+            </li>
+          <% else %>
+            <li>
+            <%= link_to('Login', new_user_session_path)  %>  
+            </li>
+          <% end %>
+
 
       </ul>
 
@@ -70,9 +80,15 @@
               <option>Gates</option>
 
           </select></li> -->
-        <%= link_to "ADD AREA", new_area_path %>
+        <% if can? :manage, @area %>
+          <%= link_to "ADD AREA", new_area_path %>
+        <% end %>
+        <% if can? :manage, @resource %>
         <%= link_to "ADD RESOURCE", new_resource_path %>
+        <% end %>
+        <% if can? :manage, @user %>
         <%= link_to "ADD USER", new_user_registration_path %>
+        <% end %>
         <%= link_to "BOOK NOW", new_booking_path %>
       </ul>
     </nav>
