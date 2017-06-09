@@ -10,12 +10,20 @@
 
   <body>
 
+      <%# testing phase only? %>
+      <div>
+        <% if user_signed_in? %>
+          <div>Signed in as: <%= current_user.email %> <br> Role: <%= current_user.role %></div>
+        <% end %>
+      </div>
+
     <div class ="container" >
     <nav class = 'topNav'>
        <ul class='topNav_item'>
          <li><img src ='/HubLogo.png' width="50px" height="50px"></li>
            <!--<img src="<%= asset_path "Hub logo.png"%>" class="logo"alt="/HubLogo.png"/><a href="https://www.digitalhub.je"> --></a>
         <li><%= link_to "LOGIN", new_user_session_path %></li>
+
       </ul>
 
       </nav>
