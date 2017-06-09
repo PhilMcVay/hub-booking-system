@@ -13,3 +13,6 @@ Area.create(id: 4, name: 'Edison - Large Meeting Room', capacity: 14, image_file
 Area.create(id: 5, name: 'Sandberg - Meeting Room', capacity: 14, image_file_name: 'Sandberg.jpg', image_content_type: 'image/jpeg', image_file_size: 163524, image_updated_at: '29/04/2017 21:56')
 Area.create(id: 6, name: 'Jobs - Meeting Room', capacity: 25, image_file_name: 'Jobs.jpg', image_content_type: 'image/jpeg', image_file_size: 96436, image_updated_at: '29/04/2017 21:56')
 Area.create(id: 7, name: 'Gates - Meeting Room', capacity: 34, image_file_name: 'Gates.jpg', image_content_type: 'image/jpeg', image_file_size: 64789, image_updated_at: '29/04/2017 21:56')
+User.create(id: 1, email: 'superadmin@hub.je', password: 'Passw1', role: 'superadmin')
+User.create(id: 2, email: 'admin@hub.je', password: 'Passw1', role: 'admin')
+User.create(id: 3, email: 'staff@hub.je', password: 'Passw1', role: 'staff')
