@@ -4,6 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   
-  ROLES = %w[superadmin admin staff]
+  ROLES = %w[superadmin admin staff guest]
 
 end

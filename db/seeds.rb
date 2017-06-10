@@ -16,3 +16,4 @@ Area.create(id: 7, name: 'Gates - Meeting Room', capacity: 34, image_file_name: 
 User.create(id: 1, email: 'superadmin@hub.je', password: 'Passw1', role: 'superadmin')
 User.create(id: 2, email: 'admin@hub.je', password: 'Passw1', role: 'admin')
 User.create(id: 3, email: 'staff@hub.je', password: 'Passw1', role: 'staff')
+User.create(id: 4, email: 'guest@hub.je', password: 'Passw1', role: 'guest')
