@@ -12,7 +12,7 @@
 <!-- addd area description to db and html,css styling --
 <p>
   <strong></strong>
-  <%= @area.type %>
+  <%= @area.description %>
 </p>
 
 <p>
@@ -37,12 +37,12 @@
       <strong>Capacity:</strong><%= @area.capacity %>
     </li>
     <!-- addd area description to db and html,css styling -->
+    <li class="area_item" >
+      <strong>Description:</strong>
+      <%= @area.description %>
+    </li>
 
     <li class= "area_item"><a class="button_book"> <%= link_to "BOOK NOW", new_booking_path %> </a></li>
-    <li class="area_item" >
-      <strong></strong>
-      <%= @area.type %>
-    </li>
 
   </ul>
   <p class="image_item">
