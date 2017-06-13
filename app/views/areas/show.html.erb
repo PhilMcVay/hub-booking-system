@@ -29,26 +29,16 @@
 
 <div class="area_container">
   <ul class="area">
-    <li class="area_item">
-      <strong>AREA:</strong><%= @area.name %>
-    </li>
-
-    <li class="area_item">
-      <strong>Capacity:</strong><%= @area.capacity %>
-    </li>
-    <!-- addd area description to db and html,css styling -->
-
-    <li class= "area_item"><a class="button_book"> <%= link_to "BOOK NOW", new_booking_path %> </a></li>
-    <li class="area_item" >
-      <strong></strong>
-      <%= @area.type %>
-    </li>
-
+    <li class="area_item"> <strong class="roomtext"> <%= @area.name %></strong></li>
+    <li class="area_item"> <strong>Capacity:</strong> <%= @area.capacity %> </li>
+    <!-- add area description to db and html,css styling -->
+    <div class="show_Button">
+    <li class= "topNav" "area_item"> <%=link_to "CHECK CALENDAR" %></li>
+    <li class= "topNav" "area_item"> <%= link_to "BOOK NOW", new_booking_path %></li>
+  </div>
+    <li class="area_item" > <strong></strong> <%= @area.type %> </li>
   </ul>
-  <p class="image_item">
-    <strong></strong>
-    <%= image_tag @area.image.url(:medium) %>
-  </p>
+  <p class="image_item"> <strong></strong> <%= image_tag @area.image.url(:medium) %> </p>
 </div>
 
 <%= link_to 'Edit', edit_area_path(@area) %> |

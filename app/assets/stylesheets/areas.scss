@@ -15,14 +15,14 @@ h1 {
   justify-content: center;
 }
 
-.area
+.show_Button
 {
-
+  display: block;
 }
 
 .area_item
 {
-  display: flex;
+  display: block;
   color: black;
   justify-content: flex-start;
 }
@@ -30,4 +30,8 @@ h1 {
 {
   display: flex;
   justify-content: flex-start;
+}
+.roomtext
+{
+  color: #374EA1;
 }
