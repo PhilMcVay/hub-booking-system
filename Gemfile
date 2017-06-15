@@ -45,6 +45,9 @@ gem "figaro"
 #cancancan
 gem 'cancancan', '~> 1.10'
 
+gem 'fullcalendar-rails'
+gem 'momentjs-rails'
+
 
 
 group :development, :test do
