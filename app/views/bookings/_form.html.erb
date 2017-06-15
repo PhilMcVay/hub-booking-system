@@ -14,7 +14,7 @@
 
   <div class="field">
     <%= f.label :no_of_people %>
-    <%= f.select :no_of_people, (1..150), { :include_blank => true } %>
+    <%= f.select :no_of_people, (1..150), { :prompt => "--Select--" } %>
   </div>
 
   <%= f.collection_check_boxes(:resource, Resource.all, :id, :item) do |c| %>
@@ -39,7 +39,7 @@
 
   <div class="field">
     <%= f.label :area_id %>
-    <%= f.collection_select :area_id, @areas, :id, :name, { :include_blank => true } %>
+    <%= f.collection_select :area_id, @areas, :id, :name, { :prompt => "--Select--" } %>
   </div>
 
   <div class="actions">

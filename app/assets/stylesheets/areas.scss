@@ -15,6 +15,11 @@ h1 {
   justify-content: center;
 }
 
+.halfwidth
+{
+  width: 50px;
+}
+
 .show_Button
 {
   display: block;
@@ -26,12 +31,18 @@ h1 {
   color: black;
   justify-content: flex-start;
 }
+
 .image_item
 {
   display: flex;
   justify-content: flex-start;
 }
+
 .roomtext
 {
   color: #374EA1;
+  font-size: 18px;
+  height: 20px;
+  margin-bottom: 5px;
+
 }
