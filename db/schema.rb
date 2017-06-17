@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20170611184316) do
   create_table "areas", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.integer  "capacity"
+    t.string   "color"
     t.datetime "created_at",                       null: false
     t.datetime "updated_at",                       null: false
     t.string   "image_file_name"

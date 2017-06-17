@@ -24,21 +24,32 @@ $(document).ready(function() {
 
     $('#calendar').fullCalendar({
         // put your options and callbacks here
-    
+    		header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'month,agendaWeek,agendaDay'
+	      },
+
+				events: '/bookings.json',
+
+	      selectable: true,
+	      selectHelper: true,
+	      editable: true,
+	      eventLimit: true,
 
 
-        eventSources: [
 
+        //eventSources: [
         // your event source
-        {
-            url: '/bookings.json', // use the `url` property
-            color: 'pink',    // an option!
-            textColor: 'black'  // an option!
-        }
+        //{
+        //    url: '/bookings.json', // use the `url` property
+        //    color: 'pink',    // an option!
+        //    textColor: 'black'  // an option!
+        //}
 
         // any other sources...
 
-    		]
+    		//]
 
 
 
