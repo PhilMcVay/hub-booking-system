@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170611184316) do
+ActiveRecord::Schema.define(version: 20170617144712) do
 
   create_table "area_resources", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "area_id"
@@ -24,7 +24,6 @@ ActiveRecord::Schema.define(version: 20170611184316) do
   create_table "areas", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.integer  "capacity"
-    t.string   "color"
     t.datetime "created_at",                       null: false
     t.datetime "updated_at",                       null: false
     t.string   "image_file_name"
@@ -32,6 +31,7 @@ ActiveRecord::Schema.define(version: 20170611184316) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.text     "description",        limit: 65535
+    t.string   "color"
   end
 
   create_table "bookings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
