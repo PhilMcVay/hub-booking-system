@@ -34,18 +34,6 @@ ActiveRecord::Schema.define(version: 20170617144712) do
     t.string   "color"
   end
 
-  create_table "booking_details", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name"
-    t.string   "company"
-    t.string   "email"
-    t.string   "membership"
-    t.text     "other_notes", limit: 65535
-    t.integer  "booking_id"
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
-    t.index ["booking_id"], name: "index_booking_details_on_booking_id", using: :btree
-  end
-
   create_table "bookings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.datetime "start_time"
     t.datetime "end_time"
@@ -53,12 +41,10 @@ ActiveRecord::Schema.define(version: 20170617144712) do
     t.string   "resource"
     t.string   "status"
     t.integer  "area_id"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-    t.integer  "booking_details_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.integer  "detail_id"
     t.index ["area_id"], name: "index_bookings_on_area_id", using: :btree
-    t.index ["booking_details_id"], name: "index_bookings_on_booking_details_id", using: :btree
     t.index ["detail_id"], name: "index_bookings_on_detail_id", using: :btree
   end
 
@@ -101,7 +87,6 @@ ActiveRecord::Schema.define(version: 20170617144712) do
 
   add_foreign_key "area_resources", "areas"
   add_foreign_key "area_resources", "resources"
-  add_foreign_key "booking_details", "bookings"
   add_foreign_key "bookings", "areas"
   add_foreign_key "bookings", "details"
   add_foreign_key "details", "bookings"
