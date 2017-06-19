@@ -6,10 +6,10 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Capacity</th>
-      <th>Image</th>
-      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,12 +19,12 @@
       <tr>
         <td><%= area.name %></td>
         <td><%= area.capacity %></td>
-        <td><%= image_tag area.image.url(:thumb) %></td>
-        <td><%= area.description %></td>
-        <td><%= link_to 'Show', area %></td>
+        <td class="i_width"><%= image_tag area.image.url(:thumb) %></td>
+        <td class="d_width"><%= area.description %></td>
+        <td class="areasT"><%= link_to 'Show', area %></td>
         <% if can? :update, @area %>
-          <td><%= link_to 'Edit', edit_area_path(area) %></td>
-          <td><%= link_to 'Destroy', area, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td class="areasT"><%= link_to 'Edit', edit_area_path(area) %></td>
+          <td class="areasT"><%= link_to 'Destroy', area, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <% end %>
       </tr>
     <% end %>
