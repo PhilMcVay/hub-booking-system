@@ -46,6 +46,8 @@ gem "figaro"
 gem 'cancancan', '~> 1.10'
 
 gem 'bootstrap-datepicker-rails'
+gem 'fullcalendar-rails'
+gem 'momentjs-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

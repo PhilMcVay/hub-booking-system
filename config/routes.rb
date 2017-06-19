@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     post :approve
     end
 
-  root to: "areas#index"
+  #root to: "areas#index"
+  root to: "calendar#index"
 
 end

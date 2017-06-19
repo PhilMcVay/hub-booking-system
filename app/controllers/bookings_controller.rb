@@ -72,7 +72,9 @@ class BookingsController < ApplicationController
   # Approve pending bookings
   def approve
     @booking = Booking.find(params[:booking_id])
+    @detail = Detail.find(params[:booking_id])
     @booking.update(status: "Approved")
+    ConfirmationMailer.confirmation_email(@detail).deliver_now
     redirect_to bookings_path
   end
 
