@@ -28,7 +28,9 @@
         <td><%= link_to 'Show', booking %></td>
         <td><%= link_to 'Edit', edit_booking_path(booking) %></td>
         <td><%= link_to 'Destroy', booking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td><%= link_to 'Details', booking_detail_path(booking, booking.details.first) %></td>
+        <% if booking.details.exists? %>
+          <td><%= link_to 'Details', booking_detail_path(booking, booking.details.first) %></td>
+        <% end %>
         <td><%= button_to "Approve", booking_approve_path(booking) %></td>
       </tr>
     <% end %>
