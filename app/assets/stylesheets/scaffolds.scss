@@ -53,13 +53,16 @@ td {
 {
   align-content: space-around;
 }
-div {
-  &.field, &.actions {
+div
+{
+&.field, &.actions
+{
     margin-bottom: 10px;
   }
 }
 
-#notice {
+#notice
+{
   color: green;
 }
 

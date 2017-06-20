@@ -12,17 +12,18 @@
     </div>
   <% end %>
 
+<div class="form">
   <div class="field">
     <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
 
-  <div class="field">
+  <div class="field select_options">
     <%= f.label :capacity %>
     <%= f.select :capacity, (1..150), { :include_blank => true } %>
   </div>
 
-  <div class="field">
+  <div class="field select_options">
     <%= f.label :image %>
     <%= f.file_field :image %>
   </div>
@@ -36,4 +37,5 @@
     <%= f.submit %>
   </div>
 <% end %>
+</div>
 </div>
