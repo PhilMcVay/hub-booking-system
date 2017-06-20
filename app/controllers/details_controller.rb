@@ -31,6 +31,7 @@ class DetailsController < ApplicationController
         format.html { render :"bookings/confirmation", notice: 'Detail was successfully created.' }
         format.json { render :show, status: :created, location: @detail }
         BookingMailer.booking_email(@detail).deliver_now
+        AdminBookingMailer.admin_booking_email(@user).deliver_now
       else
         format.html { render :new }
         format.json { render json: @detail.errors, status: :unprocessable_entity }
