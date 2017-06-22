@@ -11,9 +11,9 @@
  * It is generally better to create a new file per style scope.
  *
  *= require bootstrap-datepicker
+*= require fullcalendar
  *= require_tree .
  *= require_self
- *= require fullcalendar
  */
 
 * {
@@ -99,7 +99,7 @@ html, body {
 
 .logo
 {
-    width: 10px;
+  max-width: 50%;
   margin: 0 5px;
 }
 /* log and login menu end */
@@ -112,10 +112,32 @@ html, body {
   background-color: #374EA1;
 }
 
-.navMenu ul {
+.navMenu  {
   width: 100%;
+  /*display: flex;*/
+  align-items: center;
+  justify-content: center;
+  /*padding-left: 10px;
+  padding-right: 10px;*/
 }
 
+.navMenuOptions {
+  width: 80%;
+
+  display: inline-block;
+}
+
+.navMenuOptions ul {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navMenu ul select {
+  margin-left: 5px;
+  /*margin-right: 100px;*/
+}
 
 .navMenu_item
 {
@@ -189,6 +211,39 @@ html, body {
    vertical-align: inherit;
  }
 
+ .navMenuLeft {
+   display: inline-block;
+   /*float: left;*/
+   /*display: block;*/
+   /*float: left;*/
+   align-items: left;
+   /*margin-top: 10px;*/
+   /*width: 40%;*/
+   align-items: left;
+ }
+
+ .navMenuLeft ul {
+   align-items: left;
+   margin-left: 0px;
+   padding-left: 0px;
+ }
+
+ .navMenuRight {
+   display: inline-block;
+   /*display: block;*/
+   /*float: right;*/
+   /*margin: 10px;*/
+   /*width: 50%;*/
+   align-items: right;
+ }
+
+ .navMenuRight ul {
+   align-items: left;
+   margin-left: 0px;
+   padding-left: 0px;
+ }
+
+
  .navFooter
  {
    display: flex;
@@ -221,11 +276,8 @@ display: block;
  }
 
 
- a:hover
+ a
  {
    text-decoration: none;
-   color: #000;
-   background-color:#8457A3;
-   text-decoration: none;
-  list-style: none;
+   color: black;
  }

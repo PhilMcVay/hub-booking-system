@@ -40,60 +40,66 @@
 
     <br>
     <div class = "navMenu">
+      <div class = "navMenuOptions">
 
-      <ul>
-        <li class='navMenu_item'><%= link_to "CALENDAR", root_path %>
-        
-          <!--
-          <select>
-            <ptgroup label="Rate">
-              <option>Day</option>
-              <option>Week</option>
-              <option>Month</option>
+        <ul>
+          <div class = "navMenuLeft">
+            <li class='navMenu_item'><%= link_to "CALENDAR", root_path %></li>
 
-          </select>
+              <!--
+              <select>
+                <ptgroup label="Rate">
+                  <option>Day</option>
+                  <option>Week</option>
+                  <option>Month</option>
+
+              </select>
 
 
-        
 
-        <div class ="dropdown">
-          <button class="dropbtn">Dropdown</button>
-          <div class="dropdown-content">
-            <a href="#">Day</a>
-            <a href="#">Week</a>
-            <a href="#">Month</a>
-          </div>-->
-      <li class='navMenu_item'> <%= link_to "AREA", areas_path %>
 
-        <select name= "areas[area_id]">
-          <% Area.all.each do |area|%>
-          <option value="area.id %>"><%= link_to "#{area.name}", area_path(area) %></option>
-          <% end %>
-        </select>
-          <!--<select>
-            <ptgroup label="area">
-              <option>Digital Jersey Hub</option>
-              <option>Edison <a><%= link_to "Edison", area_path(4) %></a></option>
-              <option>Breakout Zone</option>
-              <option>Skills Zone</option>
-              <option>Sandberg</option>
-              <option>Jobs</option>
-              <option>Gates</option>
+            <div class ="dropdown">
+              <button class="dropbtn">Dropdown</button>
+              <div class="dropdown-content">
+                <a href="#">Day</a>
+                <a href="#">Week</a>
+                <a href="#">Month</a>
+              </div>-->
+          <li class='navMenu_item'> <%= link_to "AREA", areas_path %></li>
 
-          </select></li> -->
-        <% if can? :manage, @area %>
-        <%= link_to "ADD AREA", new_area_path %>
-        <% end %>
-        <% if can? :manage, @resource %>
-        <%= link_to "ADD RESOURCE", new_resource_path %>
-        <% end %>
-        <% if can? :manage, @user %>
-        <%= link_to "ADD USER", new_user_registration_path %>
-        <% end %>
-        <%= link_to "BOOK NOW", new_booking_path %>
-      </ul>
-    </nav>
-  </div>
+            <select name= "areas[area_id]">
+              <% Area.all.each do |area|%>
+              <option value="area.id %>"><%= link_to "#{area.name}", area_path(area) %></option>
+              <% end %>
+            </select>
+          </div>
+              <!--<select>
+                <ptgroup label="area">
+                  <option>Digital Jersey Hub</option>
+                  <option>Edison <a><%= link_to "Edison", area_path(4) %></a></option>
+                  <option>Breakout Zone</option>
+                  <option>Skills Zone</option>
+                  <option>Sandberg</option>
+                  <option>Jobs</option>
+                  <option>Gates</option>
+
+              </select></li> -->
+              <div class = "navMenuRight">
+                <% if can? :manage, @area %>
+                <li class='navMenu_item'><%= link_to "ADD AREA", new_area_path %></li>
+                <% end %>
+                <% if can? :manage, @resource %>
+                <li class='navMenu_item'><%= link_to "ADD RESOURCE", new_resource_path %></li>
+                <% end %>
+                <% if can? :manage, @user %>
+                <li class='navMenu_item'><%= link_to "ADD USER", new_user_registration_path %></li>
+                <% end %>
+                <li class='navMenu_item'><%= link_to "BOOK NOW", new_booking_path %></li>
+              </div>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </div>
 
     <p class="notice" "area_container"><%= notice %></p>
