@@ -52,7 +52,20 @@ body {
   box-shadow:0 4px 10px 4px rgba($form-bg,.3);
   position: middle;
 }
+.area_show
+{
+display:flex;
+flex-direction: row-reverse;
+background:rgba($form-bg,.9);
+padding: 40px;
+max-width:1200px;
+margin:40px auto;
+border-radius:$br;
+box-shadow:0 4px 10px 4px rgba($form-bg,.3);
 
+justify-content: center;
+
+}
 h1, h3 {
   text-align: center;
   color: black;
@@ -97,6 +110,7 @@ h1, h3 {
   display: block;
   color: black;
   justify-content: flex-start;
+
 }
 
 .image_item
@@ -108,8 +122,7 @@ h1, h3 {
 .roomtext
 {
   color: #374EA1;
-  font-size: 18px;
-  height: 20px;
-  margin-bottom: 5px;
+  text-align: left;
+  margin-bottom: 10px;
 
 }

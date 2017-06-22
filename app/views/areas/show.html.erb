@@ -1,38 +1,13 @@
 <p id="notice"><%= notice %></p>
-<!--
-<p>
-  <strong>AREA:</strong>
-  <%= @area.name %>
-</p>
-
-<p>
-  <strong>Capacity:</strong>
-  <%= @area.capacity %>
-</p>
-<!-- addd area description to db and html,css styling --
-<p>
-  <strong></strong>
-  <%= @area.description %>
-</p>
-
-<p>
-  <strong></strong>
-  <%= image_tag @area.image.url(:medium) %>
-</p>
-<ul>
-  <li class="navMenu_item_button"><a class="button book"> <%= link_to "BOOK NOW", new_booking_path %> </a></li>
-<img />
-</ul> -->
 
 
-
-<div class="list_view">
+<div class="area_show">
 
   <ul class="area">
 
-    <li class="area_item"> <h3 class="roomtext"> <%= @area.name %></h3></li>
+    <li class="area_item"> <h2 class="roomtext"> <%= @area.name %></h3></li>
     <li class="area_item"> <h3 class="roomtext">Description:</h3> <%= @area.description %> </li>
-    <li class="area_item"> <h3 class="roomtext">No. of People:</h3> <%= @area.capacity %> </li>
+    <li class="area_item"> <h3 class="roomtext">Capacity:</h3> <%= @area.capacity %> </li>
     <!-- add area description to db and html,css styling -->
     <div class="show_Button">
     <li class= "topNav" "area_item"> <%=link_to "CHECK CALENDAR" %></li>
@@ -43,8 +18,6 @@
     <li class="area_item">
 
     <!-- addd area description to db and html,css styling -->
-
-
 
   </ul>
   <p class="image_item"> <strong></strong> <%= image_tag @area.image.url(:medium) %> </p>
