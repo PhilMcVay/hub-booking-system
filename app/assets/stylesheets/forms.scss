@@ -125,7 +125,7 @@ label {
   /*position:absolute;*/
   display: block;
   width: 100px;
-  float: left;
+  float: inherit;
   margin-top: 10px;
   margin-bottom: 10px;
   transform:translateY(6px);
@@ -135,7 +135,7 @@ label {
   transition:all 0.25s ease;
   -webkit-backface-visibility: hidden;
   pointer-events: none;
-  font-size:20px;
+  font-size:18px;
   .req {
   	margin:2px;
   	color:$main;

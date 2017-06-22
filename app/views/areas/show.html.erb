@@ -26,12 +26,12 @@
 
 
 
+<div class="list_view">
 
-<div class="area_container">
   <ul class="area">
 
     <li class="area_item"> <h3 class="roomtext"> <%= @area.name %></h3></li>
-    <li class="area_item"> <h3 class="roomtext" class="halfwidth" >Description:</h3> <%= @area.description %> </li>
+    <li class="area_item"> <h3 class="roomtext">Description:</h3> <%= @area.description %> </li>
     <li class="area_item"> <h3 class="roomtext">No. of People:</h3> <%= @area.capacity %> </li>
     <!-- add area description to db and html,css styling -->
     <div class="show_Button">
@@ -49,6 +49,7 @@
   </ul>
   <p class="image_item"> <strong></strong> <%= image_tag @area.image.url(:medium) %> </p>
 </div>
+
 
 <%= link_to 'Edit', edit_area_path(@area) %> |
 <%= link_to 'Back', areas_path %>
