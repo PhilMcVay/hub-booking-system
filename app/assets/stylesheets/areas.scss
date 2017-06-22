@@ -41,6 +41,9 @@ body {
 }
 
 .list_view {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
   background:rgba($form-bg,.9);
   padding: 40px;
   max-width:80%;
@@ -65,12 +68,11 @@ h1, h3 {
   display:flex;
   flex-direction: column;
   justify-content: center;
+  padding: 40px;
+  max-width:1200px;
+  margin:40px auto;
 }
 
-.halfwidth
-{
-  width: 50px;
-}
 
 .areasT
 {
