@@ -22,6 +22,7 @@ class DetailsController < ApplicationController
   # POST /details
   # POST /details.json
   def create
+    @user = User.where(role: "admin").take!
     @detail = Detail.new(detail_params)
     @booking = Booking.find(params[:booking_id])
     @detail.booking_id = @booking.id
