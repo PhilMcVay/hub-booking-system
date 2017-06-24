@@ -241,7 +241,7 @@ select {
 
   /*color: black;*/
   color: #505050;
-  
+
 }
 
 .button
@@ -253,9 +253,9 @@ select {
 
 .actions input
 {
-  background-color: #0089b9;
+  background-color: #374EA1;
   padding: 15px;
-  border: solid 1px #99DBF8;
+  border: solid 1px lighten(#374EA1,5%);;
   /*color: black;*/
   color: #ffffff;
   &:hover, &:focus {

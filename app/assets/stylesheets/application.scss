@@ -132,7 +132,6 @@ html, body {
 
 .navMenuOptions {
   width: 80%;
-
   display: inline-block;
 }
 
@@ -140,7 +139,8 @@ html, body {
   display: flex;
   align-content: center;
   align-items: center;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
+  justify-content: center;
 }
 
 .navMenu ul select {
@@ -229,6 +229,7 @@ html, body {
    /*margin-top: 10px;*/
    /*width: 40%;*/
    align-items: left;
+   margin-right: 10px;
  }
 
  .navMenuLeft ul {
@@ -241,13 +242,13 @@ html, body {
    display: inline-block;
    /*display: block;*/
    /*float: right;*/
-   /*margin: 10px;*/
+   margin-left: 10px;
    /*width: 50%;*/
    align-items: right;
  }
 
  .navMenuRight ul {
-   align-items: left;
+   align-items: right;
    margin-left: 0px;
    padding-left: 0px;
  }
