@@ -86,6 +86,9 @@
 
               </select></li> -->
               <div class = "navMenuRight">
+                <% if can? :manage, @booking %>
+                <li class='navMenu_item'><%= link_to "PENDING BOOKINGS", bookings_path %></li>
+                <% end %>
                 <% if can? :manage, @area %>
                 <li class='navMenu_item'><%= link_to "ADD AREA", new_area_path %></li>
                 <% end %>
