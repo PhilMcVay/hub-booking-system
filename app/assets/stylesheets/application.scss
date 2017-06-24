@@ -93,6 +93,14 @@ html, body {
   height: 70px;
 }
 
+.logo a {
+  height: 70px;
+  border: none;
+  &:hover {
+    background-color: white;
+  }
+}
+
 .flex-item a
 {
 
