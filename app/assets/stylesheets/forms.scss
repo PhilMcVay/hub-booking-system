@@ -239,7 +239,9 @@ select {
   /*background-color: #bee3f8;*/
   background-color: #fff;
 
-  color: black;
+  /*color: black;*/
+  color: #505050;
+  
 }
 
 .button
@@ -255,6 +257,7 @@ select {
   padding: 15px;
   border: solid 1px #99DBF8;
   /*color: black;*/
+  color: #ffffff;
   &:hover, &:focus {
     background:$main-light;
   }
