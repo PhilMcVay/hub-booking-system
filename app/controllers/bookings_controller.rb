@@ -2,7 +2,7 @@ class BookingsController < ApplicationController
 
   load_and_authorize_resource
   before_action :set_booking, only: [:show, :edit, :update, :destroy]
-  
+
 
   # GET /bookings
   # GET /bookings.json
@@ -72,7 +72,7 @@ class BookingsController < ApplicationController
   # Approve pending bookings
   def approve
     @booking = Booking.find(params[:booking_id])
-    @detail = Detail.find(params[:booking_id])
+    @detail = Detail.where(params[:booking_id]).take!
     @booking.update(status: "Approved")
     ConfirmationMailer.confirmation_email(@detail).deliver_now
     redirect_to bookings_path
