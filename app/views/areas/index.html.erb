@@ -20,10 +20,10 @@
         <td><%= area.capacity %></td>
         <td class="i_width"><%= image_tag area.image.url(:thumb) %></td>
         <td class="d_width"><%= area.description %></td>
-        <td class="areasT"><%= link_to 'Show', area %></td>
+        <td class="areasT"><%= link_to 'Info', area %></td>
         <% if can? :update, @area %>
           <td class="areasT"><%= link_to 'Edit', edit_area_path(area) %></td>
-          <td class="areasT"><%= link_to 'Destroy', area, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td class="areasT"><%= link_to 'Delete', area, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <% end %>
       </tr>
     <% end %>

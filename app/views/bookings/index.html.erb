@@ -1,7 +1,7 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1 class="list_view">Bookings</h1>
+<h1 class="list_view">Pending Bookings</h1>
 
 <div class= "list_view">
 <table>
@@ -24,7 +24,7 @@
         <td><%= booking.no_of_people %></td>
         <td><%= booking.status %></td>
         <td><%= booking.area.name %></td>
-        <td class="action"><%= link_to 'Show', booking %></td>
+        <td class="action"><%= link_to 'Info', booking %></td>
         <td class="action"><%= link_to 'Edit', edit_booking_path(booking) %></td>
         <% if booking.details.exists? %>
           <td><%= link_to 'Details', booking_detail_path(booking, booking.details.first) %></td>
