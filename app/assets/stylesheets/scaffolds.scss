@@ -2,7 +2,7 @@ body {
   background-color: #fff;
   color: #333;
   /*font-family: verdana, arial, helvetica, sans-serif;*/
-  font-family: 'DINOT-Regular', sans-serif;
+  font-family: 'DINOT', sans-serif;
   font-size: 13px;
   line-height: 15px;
   margin: 20px;
@@ -10,7 +10,7 @@ body {
 
 p, ol, ul, td {
   /*font-family: verdana, arial, helvetica, sans-serif;*/
-  font-family: 'DINOT-Regular', sans-serif;
+  font-family: 'DINOT', sans-serif;
   font-size: 13px;
   line-height: 18px;
   margin: 33px;
@@ -23,6 +23,7 @@ pre {
 }
 
 a {
+  font-family: 'DINOT', sans-serif;
   color: #000;
   text-decoration: none;
 
@@ -97,6 +98,7 @@ div
   }
 
   ul li {
+    font-family: 'DINOT', sans-serif;
     font-size: 12px;
     list-style: square;
   }
