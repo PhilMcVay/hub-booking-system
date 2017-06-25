@@ -27,18 +27,6 @@ html {
 	overflow-y: scroll;
 }
 
-body {
-/*  background:$body-bg;*/
-  background: white;
-  background: url('https://www.digitalhub.je/wp-content/uploads/2015/02/facilitiesgenpagepicx2400-updated.png') no-repeat center center fixed;
-/*  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;*/
-  max-width: 100%;
-  max-height: auto;
-  font-family: 'DINOT-Regular', sans-serif;
-}
 
 .list_view {
   display:flex;
@@ -70,10 +58,7 @@ box-shadow:0 4px 10px 4px rgba($form-bg,.3);
 }*/
 h1, h3 {
   text-align: center;
-  color: black;
-  font-weight:$thin;
   margin:0 0 40px;
-  font-family: 'DINOT-Regular', sans-serif;
 
 
 }
