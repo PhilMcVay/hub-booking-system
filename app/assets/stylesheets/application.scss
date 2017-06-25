@@ -218,7 +218,8 @@ html, body {
    justify-content: space-around;
    font-weight: bold;
    background-color: #374EA1;
-   color: white;
+   color: #fff;
+   padding-top: 10px;
  }
 
 .sub-nav a
@@ -226,7 +227,7 @@ html, body {
   display: block;
   text-align: center;
   text-decoration: none;
-  color: white;
+  color: #fff;
 }
 
 .sub-nav img {
@@ -287,7 +288,8 @@ html, body {
 
  .navFooterBackground {
   background-color: #fff;
-  color: #000;
+  /*color: #000;*/
+  padding-top: 10px;
  }
 
  .footerItem
@@ -302,15 +304,23 @@ display: block;
 
  ul li
  {
-   color: #000;
+   color: #999999;
  }
 
 
  a
  {
    text-decoration: none;
-   color: black;
+   /*color: black;*/
  }
+
+.graycolour, .graycolour a {
+  color: #999999;
+}
+
+.purplecolour a {
+  color: #292983;
+}
 
  .approve {
   background-color: #fff;
@@ -319,7 +329,7 @@ display: block;
   border-color: none;
   &:hover {
     background-color: $main;
-    color: white;
+    color: #fff;
   }
 }
 
@@ -330,7 +340,7 @@ display: block;
   font-size:16px;
   &:hover {
     background-color: #f45042;
-    color: white;
+    color: #fff;
   }
 }
 
@@ -354,7 +364,7 @@ display: block;
 
 
 .fc-title {
-  color: white;
+  color: #fff;
   font-weight: bold;
 }
 
