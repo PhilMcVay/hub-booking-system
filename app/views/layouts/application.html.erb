@@ -10,14 +10,8 @@
 
   <body>
 
-      <%# testing phase only? %>
-      <div>
-        <% if user_signed_in? %>
-          <div>Signed in as: <%= current_user.email %> <br> Role: <%= current_user.role %></div>
-        <% end %>
-      </div>
-
     <div class ="container" >
+
     <nav class = 'topNav'>
        <ul class='topNav_item'>
 
@@ -40,8 +34,7 @@
       </nav>
     </div>
 
-    <br>
-    <div class = "navMenu">
+    <div class = "navMenu sticky">
 
       <div class = "navMenuOptions">
 
@@ -142,7 +135,18 @@
         <li class='footerItem graycolour'> Phone: 01534 828 585 </li>
         <li class='footerItem graycolour'><a href="mailto:info@digitalhub.je"> Email: info@digitalhub.je</a></li>
       </ul>
+      <br>
+
+
     </footer>
+
+      <%# testing phase only? %>
+      <div>
+        <% if user_signed_in? %>
+          <div>Signed in as: <%= current_user.email %> <br> Role: <%= current_user.role %></div>
+        <% end %>
+      </div>
+
   </div>
 
   </body>

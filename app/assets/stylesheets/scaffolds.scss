@@ -1,11 +1,17 @@
-body {
-  background-color: #fff;
+html { 
 
-  background:white;
-  
+}
+
+body {
   max-width: 100%;
   max-height: auto;
 
+
+  background: url('https://www.digitalhub.je/wp-content/uploads/2015/02/facilitiesgenpagepicx2400-updated.png') no-repeat top center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 
   color: #333;
   font-family: 'DINOT', sans-serif;
@@ -14,9 +20,15 @@ body {
   margin: 20px;
 }
 
-.yieldwrapper {
-  background: url('https://www.digitalhub.je/wp-content/uploads/2015/02/facilitiesgenpagepicx2400-updated.png') no-repeat top center fixed;
+/*.yieldwrapper {
+  background: url('https://www.digitalhub.je/wp-content/uploads/2015/02/facilitiesgenpagepicx2400-updated.png') no-repeat center center fixed;
   width: 100%;
+}*/
+
+.sticky {
+  position: sticky;
+  top: 0; 
+  z-index: 100;
 }
 
 p, ol, ul, td {

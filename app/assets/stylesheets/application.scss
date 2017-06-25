@@ -51,12 +51,16 @@ html, body {
   margin: 0;
 }
 
+
+
+
 .flex {
   display: flex;
 }
 /*  logo and login menu        */
 .container
 {
+  background-color: white;
   @extend.flex;
 
 
