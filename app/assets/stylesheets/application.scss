@@ -44,7 +44,7 @@
  $br: 4px;
 
 * {
-  font-family: 'DINOT-Regular', sans-serif;
+  font-family: 'DINOT', sans-serif;
 }
 
 html, body {
@@ -375,6 +375,15 @@ display: block;
     background-color: #f45042;
     color: #fff;
   }
+}
+
+
+
+
+/* fullcalendar tweaks*/
+
+.fc {
+  font-family: 'DINOT';
 }
 
 .pending_items_view {

@@ -113,8 +113,10 @@
     <p class="notice" "area_container"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
-    <%= yield %>
-
+    <div class="yieldwrapper">
+      <%= yield %>
+    </div>
+    
     <nav>
       <ul class='sub-nav'>
         <li><img src="/Edison.jpg"><%= link_to "Edison", area_path(4) %></li>

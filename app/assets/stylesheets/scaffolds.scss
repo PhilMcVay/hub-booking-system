@@ -1,15 +1,25 @@
 body {
   background-color: #fff;
+
+  background:white;
+  
+  max-width: 100%;
+  max-height: auto;
+
+
   color: #333;
-  /*font-family: verdana, arial, helvetica, sans-serif;*/
   font-family: 'DINOT', sans-serif;
   font-size: 13px;
   line-height: 15px;
   margin: 20px;
 }
 
+.yieldwrapper {
+  background: url('https://www.digitalhub.je/wp-content/uploads/2015/02/facilitiesgenpagepicx2400-updated.png') no-repeat top center fixed;
+  width: 100%;
+}
+
 p, ol, ul, td {
-  /*font-family: verdana, arial, helvetica, sans-serif;*/
   font-family: 'DINOT', sans-serif;
   font-size: 13px;
   line-height: 18px;
