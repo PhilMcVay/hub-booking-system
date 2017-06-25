@@ -14,39 +14,40 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :no_of_people %>
-    <%= f.select :no_of_people, (1..150), { :prompt => "--Select--" } %>
-  </div>
 
-  <%= f.collection_check_boxes(:resource, Resource.all, :id, :item) do |c| %>
-    <div class="check">
-       <%= c.label do %>
-         <%= c.check_box + c.text %>
-       <% end %><br>
+    <div class="field">
+      <%= f.label :no_of_people %>
+      <%= f.select :no_of_people, (1..150), { :prompt => "--Select--" } %>
     </div>
+
+    <%= f.collection_check_boxes(:resource, Resource.all, :id, :item) do |c| %>
+      <div class="check">
+         <%= c.label do %>
+           <%= c.check_box + c.text %>
+         <% end %><br>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :start_time %>
+      <%= f.date_select :start_time %><br>
+      <%= f.time_select :start_time, { default: DateTime.now.beginning_of_hour, :ignore_date => true, minute_step: 30 } %>
+    </div>
+
+    <div class="field">
+      <%= f.label :end_time %>
+      <%= f.date_select :end_time %><br>
+      <%= f.time_select :end_time, { default: DateTime.now.beginning_of_hour + 30.minutes, :ignore_date => true, minute_step: 30 } %>
+    </div>
+
+    <div class="field">
+      <%= f.label :area_id %>
+      <%= f.collection_select :area_id, @areas, :id, :name, { :prompt => "--Select--" } %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Check Availability" %>
+    </div>
+
   <% end %>
-
-  <div class="field">
-    <%= f.label :start_time %>
-    <%= f.date_select :start_time %><br>
-    <%= f.time_select :start_time, { default: DateTime.now.beginning_of_hour, :ignore_date => true, minute_step: 30 } %>
   </div>
-
-  <div class="field">
-    <%= f.label :end_time %>
-    <%= f.date_select :end_time %><br>
-    <%= f.time_select :end_time, { default: DateTime.now.beginning_of_hour + 30.minutes, :ignore_date => true, minute_step: 30 } %>
-  </div>
-
-  <div class="field">
-    <%= f.label :area_id %>
-    <%= f.collection_select :area_id, @areas, :id, :name, { :prompt => "--Select--" } %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Check Availability" %>
-  </div>
-
-<% end %>
-</div>

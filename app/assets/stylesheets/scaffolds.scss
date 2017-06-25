@@ -43,6 +43,9 @@ td {
   padding-left: 0.5px;
   padding-right: 0.5px;
   background-color: #fff;
+  .action {
+    margin: 0 10px;
+  }
 }
 .d_width
 {
@@ -99,4 +102,8 @@ div
 
 label {
   display: block;
+}
+
+.action {
+  margin: 0 10px;
 }

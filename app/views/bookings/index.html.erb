@@ -5,11 +5,10 @@
 
 <table>
   <thead>
-    <tr>
+    <tr class="show_view">
       <th>Start time</th>
       <th>End time</th>
       <th>No of people</th>
-      <th>Resource</th>
       <th>Status</th>
       <th>Area</th>
       <th colspan="3"></th>
@@ -22,16 +21,15 @@
         <td><%= booking.start_time.strftime("%a #{booking.start_time.day.ordinalize} %b" + " || " + "%H:%M") %></td>
         <td><%= booking.end_time.strftime("%a #{booking.start_time.day.ordinalize} %b" + " || " + "%H:%M") %></td>
         <td><%= booking.no_of_people %></td>
-        <td><%= booking.resource %></td>
         <td><%= booking.status %></td>
         <td><%= booking.area.name %></td>
-        <td><%= link_to 'Show', booking %></td>
-        <td><%= link_to 'Edit', edit_booking_path(booking) %></td>
-        <td><%= link_to 'Destroy', booking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="action"><%= link_to 'Show', booking %></td>
+        <td class="action"><%= link_to 'Edit', edit_booking_path(booking) %></td>
         <% if booking.details.exists? %>
           <td><%= link_to 'Details', booking_detail_path(booking, booking.details.first) %></td>
         <% end %>
-        <td><%= button_to "Approve", booking_approve_path(booking) %></td>
+        <td class="reject action"><%= link_to 'Reject', booking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="approve action"><%= button_to "Approve", booking_approve_path(booking) %></td>
       </tr>
     <% end %>
   </tbody>

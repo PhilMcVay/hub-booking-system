@@ -11,11 +11,17 @@
  * It is generally better to create a new file per style scope.
  *
  *= require bootstrap-datepicker
+*= require fullcalendar
  *= require_tree .
  *= require_self
- *= require fullcalendar
  */
 
+$main: #0089b9;
+$main-light: lighten($main,5%);
+$main-dark: darken($main,5%);
+
+$gray-light: #a0b3b0;
+$gray: #ddd;
 * {
   font-family: 'DINOT-Regular', sans-serif;
 }
@@ -93,6 +99,14 @@ html, body {
   height: 70px;
 }
 
+.logo a {
+  height: 70px;
+  border: none;
+  &:hover {
+    background-color: white;
+  }
+}
+
 .flex-item a
 {
 
@@ -100,7 +114,7 @@ html, body {
 
 .logo
 {
-    width: 10px;
+  max-width: 50%;
   margin: 0 5px;
 }
 /* log and login menu end */
@@ -113,10 +127,32 @@ html, body {
   background-color: #374EA1;
 }
 
-.navMenu ul {
+.navMenu  {
   width: 100%;
+  /*display: flex;*/
+  align-items: center;
+  justify-content: center;
+  /*padding-left: 10px;
+  padding-right: 10px;*/
 }
 
+.navMenuOptions {
+  width: 80%;
+  display: inline-block;
+}
+
+.navMenuOptions ul {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  /*justify-content: space-between;*/
+  justify-content: center;
+}
+
+.navMenu ul select {
+  margin-left: 5px;
+  /*margin-right: 100px;*/
+}
 
 .navMenu_item
 {
@@ -190,6 +226,40 @@ html, body {
    vertical-align: inherit;
  }
 
+ .navMenuLeft {
+   display: inline-block;
+   /*float: left;*/
+   /*display: block;*/
+   /*float: left;*/
+   align-items: left;
+   /*margin-top: 10px;*/
+   /*width: 40%;*/
+   align-items: left;
+   margin-right: 10px;
+ }
+
+ .navMenuLeft ul {
+   align-items: left;
+   margin-left: 0px;
+   padding-left: 0px;
+ }
+
+ .navMenuRight {
+   display: inline-block;
+   /*display: block;*/
+   /*float: right;*/
+   margin-left: 10px;
+   /*width: 50%;*/
+   align-items: right;
+ }
+
+ .navMenuRight ul {
+   align-items: right;
+   margin-left: 0px;
+   padding-left: 0px;
+ }
+
+
  .navFooter
  {
    display: flex;
@@ -222,11 +292,37 @@ display: block;
  }
 
 
- a:hover
+ a
  {
    text-decoration: none;
-   color: #000;
-   background-color:#8457A3;
-   text-decoration: none;
-  list-style: none;
+   color: black;
  }
+
+.approve {
+  background-color: $main;
+  color: white;
+}
+
+.reject {
+  background-color: #f45042;
+  color: white;
+  font-size:16px;
+}
+
+
+.past-event {
+  /*background-color: lightgrey;
+  border: 0px solid lightgrey;*/
+  opacity: 0.25;
+}
+
+
+
+.fc-title {
+  color: white;
+  font-weight: bold;
+}
+
+.past-event .fc-title .fc-time{
+  color: darkgrey;
+}
