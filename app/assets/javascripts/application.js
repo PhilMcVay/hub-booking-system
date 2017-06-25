@@ -38,7 +38,22 @@ $(document).ready(function() {
 	      editable: true,
 	      eventLimit: true,
 
-
+        eventRender: function(event, element, view) {                   
+            var ntoday = new Date().getTime();
+            var eventEnd = moment( event.end ).valueOf();
+            var eventStart = moment( event.start ).valueOf();
+            if (!event.end){
+                if (eventStart < ntoday){
+                    element.addClass("past-event");
+                    element.children().addClass("past-event");
+                }
+            } else {
+                if (eventEnd < ntoday){
+                    element.addClass("past-event");
+                    element.children().addClass("past-event");
+                }
+            }
+        }
 
         //eventSources: [
         // your event source

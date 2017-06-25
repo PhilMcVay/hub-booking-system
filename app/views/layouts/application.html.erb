@@ -20,8 +20,10 @@
     <div class ="container" >
     <nav class = 'topNav'>
        <ul class='topNav_item'>
+
          <li class="logo"><%= link_to image_tag("/HubLogo.png"), root_path %></li>
            <!--<img src="<%= asset_path "Hub logo.png"%>" class="logo"alt="/HubLogo.png"/><a href="https://www.digitalhub.je"> --></a>
+
 
           <% if user_signed_in? %>
             <li>
@@ -40,6 +42,7 @@
 
     <br>
     <div class = "navMenu">
+
       <div class = "navMenuOptions">
 
         <ul>
@@ -104,6 +107,7 @@
         </nav>
       </div>
     </div>
+
   </div>
 
     <p class="notice" "area_container"><%= notice %></p>

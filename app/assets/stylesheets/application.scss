@@ -302,7 +302,7 @@ display: block;
 
  ul li
  {
-   color: #d0d9de;
+   color: #000;
  }
 
 
@@ -321,4 +321,22 @@ display: block;
   background-color: #f45042;
   color: white;
   font-size:16px;
+}
+
+
+.past-event {
+  /*background-color: lightgrey;
+  border: 0px solid lightgrey;*/
+  opacity: 0.25;
+}
+
+
+
+.fc-title {
+  color: white;
+  font-weight: bold;
+}
+
+.past-event .fc-title .fc-time{
+  color: darkgrey;
 }
