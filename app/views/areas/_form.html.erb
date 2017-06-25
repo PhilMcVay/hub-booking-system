@@ -1,4 +1,4 @@
-
+<div class="form">
 <%= form_for(area, html: { multipart: true }) do |f| %>
   <% if area.errors.any? %>
     <div id="error_explanation">
@@ -36,3 +36,4 @@
     <%= f.submit %>
   </div>
 <% end %>
+</div>
