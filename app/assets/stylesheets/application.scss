@@ -76,6 +76,29 @@ html, body {
     padding: 8px;
   }
 
+  .topNavbuttons
+  {
+      @extend.flex;
+      text-decoration: none;
+      list-style: none;
+      font-weight: bold;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+      height: 100px;
+      width: 100%;
+    }
+    .topNavbuttons a
+    {
+      @extend.flex;
+      display: inline-block;
+      text-decoration: none;
+      text-align: center;
+      border: 2px solid #0082C8;
+      padding: 8px;
+      margin-right: 10px;
+    }
+
   .navMenu_item a
   {
     text-decoration: none;
