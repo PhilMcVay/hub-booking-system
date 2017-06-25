@@ -311,15 +311,18 @@ display: block;
 
 
 .past-event {
-  background-color: lightgrey;
-  border: 0px solid lightgrey;
+  /*background-color: lightgrey;
+  border: 0px solid lightgrey;*/
+  opacity: 0.25;
 }
 
-.past-event .fc-title .fc-time{
-  color: darkgrey;
-}
+
 
 .fc-title {
   color: white;
   font-weight: bold;
+}
+
+.past-event .fc-title .fc-time{
+  color: darkgrey;
 }
