@@ -29,7 +29,7 @@
 <div class="list_view">
 
 
-<div class="list_view">
+<div class="area_show">
 
 
   <ul class="area">
@@ -38,23 +38,18 @@
     <li class="area_item"> <h3 class="roomtext">Description:</h3> <%= @area.description %> </li>
     <li class="area_item"> <h3 class="roomtext">Capacity:</h3> <%= @area.capacity %> </li>
     <!-- add area description to db and html,css styling -->
-    <div class="show_Button">
+
+<div class="show_Button">
     <li class= "topNav" "area_item"> <%=link_to "CHECK CALENDAR" %></li>
     <li class= "topNav" "area_item"> <%= link_to "BOOK NOW", new_booking_path %></li>
-  </div>
 
-
-
-      <li class="area_item">
-
+    <li class="area_item">
 
       <!-- addd area description to db and html,css styling -->
-
-
-
-    </ul>
+</ul>
     <p class="image_item"> <strong></strong> <%= image_tag @area.image.url(:medium) %> </p>
-  </div>
+ </ul>
+</div>
 
 </div>
 
