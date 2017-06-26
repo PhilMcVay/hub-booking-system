@@ -1,10 +1,10 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1 class="list_view">Bookings</h1>
+<h1 class="list_view">Pending Bookings</h1>
 
 <div class= "list_view">
-<table>
+<table class="pending_items_view">
   <thead>
     <tr class="show_view">
       <th>Start time</th>
@@ -19,18 +19,18 @@
   <tbody>
     <% @bookings.each do |booking| %>
       <tr>
-        <td><%= booking.start_time.strftime("%a #{booking.start_time.day.ordinalize} %b" + " || " + "%H:%M") %></td>
-        <td><%= booking.end_time.strftime("%a #{booking.start_time.day.ordinalize} %b" + " || " + "%H:%M") %></td>
-        <td><%= booking.no_of_people %></td>
-        <td><%= booking.status %></td>
-        <td><%= booking.area.name %></td>
-        <td class="action"><%= link_to 'Show', booking %></td>
-        <td class="action"><%= link_to 'Edit', edit_booking_path(booking) %></td>
+        <td class="pending_items_element"><%= booking.start_time.strftime("%a #{booking.start_time.day.ordinalize} %b" + " || " + "%H:%M") %></td>
+        <td class="pending_items_element"><%= booking.end_time.strftime("%a #{booking.start_time.day.ordinalize} %b" + " || " + "%H:%M") %></td>
+        <td class="pending_items_element"><%= booking.no_of_people %></td>
+        <td class="pending_items_element"><%= booking.status %></td>
+        <td class="pending_items_element"><%= booking.area.name %></td>
+        <td class="action pending_items_element"><%= link_to 'Show', booking %></td>
+        <td class="action pending_items_element"><%= link_to 'Edit', edit_booking_path(booking) %></td>
         <% if booking.details.exists? %>
-          <td><%= link_to 'Details', booking_detail_path(booking, booking.details.first) %></td>
+          <td class="pending_items_element"><%= link_to 'Details', booking_detail_path(booking, booking.details.first) %></td>
         <% end %>
-        <td class="reject action"><%= link_to 'Reject', booking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td class="approve action"><%= button_to "Approve", booking_approve_path(booking) %></td>
+        <td class="reject action pending_items_element"><%= link_to 'Reject', booking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="approve action pending_items_element"><%= button_to "Approve", booking_approve_path(booking) %></td>
       </tr>
     <% end %>
   </tbody>

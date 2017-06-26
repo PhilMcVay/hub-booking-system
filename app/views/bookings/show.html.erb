@@ -17,11 +17,6 @@
 </p>
 
 <p>
-  <strong>Resource:</strong>
-  <%= @booking.resource %>
-</p>
-
-<p>
   <strong>Status:</strong>
   <%= @booking.status %>
 </p>
@@ -30,7 +25,8 @@
   <strong>Area:</strong>
   <%= @booking.area.name %>
 </p>
-</div>
 
 <%= link_to 'Edit', edit_booking_path(@booking) %> |
 <%= link_to 'Back', bookings_path %>
+
+</div>

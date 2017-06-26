@@ -313,14 +313,35 @@ display: block;
  }
 
  .approve {
-  background-color: $main;
-  color: white;
+  background-color: #fff;
+  color: #000;
+  font-size:16px;
+  border-color: none;
+  &:hover {
+    background-color: $main;
+    color: white;
+  }
 }
 
+
 .reject {
-  background-color: #f45042;
-  color: white;
+  background-color: #fff;
+  color: #000;
   font-size:16px;
+  &:hover {
+    background-color: #f45042;
+    color: white;
+  }
+}
+
+.pending_items_view {
+  display: inline-block;
+  max-width: 100%;
+}
+
+.pending_items_element {
+  padding: 0 10px 0 10px;
+  text-align: center;
 }
 
 
