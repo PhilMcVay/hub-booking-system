@@ -5,6 +5,7 @@
   json.extract! booking, :id
   json.title booking.details.first.name
   json.color booking.area.color
+  json.status booking.status
   json.start booking.start_time
   json.end booking.end_time
   json.url booking_url(booking, format: :html)

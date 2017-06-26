@@ -23,6 +23,7 @@
 
 
 function calendar() {
+  $('#calendar').html('');
   return $('#calendar').fullCalendar({
 
     header: {
@@ -37,7 +38,6 @@ function calendar() {
           selectHelper: true,
           editable: true,
           eventLimit: true,
-
         eventRender: function(event, element, view) {
             var ntoday = new Date().getTime();
             var eventEnd = moment( event.end ).valueOf();
@@ -54,13 +54,18 @@ function calendar() {
                     element.children().addClass("past-event");
                 }
             }
+
+            if(event.status.toLowerCase() == 'pending')
+            {
+              $(element).addClass('status-pending');
+            }
         }
 
   });
 };
-function clearCalendar() {
+/*function clearCalendar() {
   $('#calendar').fullCalendar('delete'); // In case delete doesn't work.
   $('#calendar').html('');
-};
+};*/
 $(document).on('turbolinks:load', calendar);
-$(document).on('turbolinks:before-cache', calendar)
+//$(document).on('turbolinks:before-cache', calendar)
