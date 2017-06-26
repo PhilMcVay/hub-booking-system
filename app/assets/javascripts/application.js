@@ -23,6 +23,7 @@
 
 
 function calendar() {
+  $('#calendar').html('');
   return $('#calendar').fullCalendar({
 
     header: {
@@ -62,9 +63,9 @@ function calendar() {
 
   });
 };
-function clearCalendar() {
+/*function clearCalendar() {
   $('#calendar').fullCalendar('delete'); // In case delete doesn't work.
   $('#calendar').html('');
-};
+};*/
 $(document).on('turbolinks:load', calendar);
-$(document).on('turbolinks:before-cache', calendar)
+//$(document).on('turbolinks:before-cache', calendar)
