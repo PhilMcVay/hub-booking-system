@@ -34,7 +34,7 @@ class BookingsController < ApplicationController
 
     respond_to do |format|
       if @booking.save
-        format.html { redirect_to new_booking_detail_path(@booking), notice: 'Room available. Please provide your details.' }
+        format.html { redirect_to new_booking_detail_path(@booking) }
         format.json { render :show, status: :created, location: @booking }
       else
         format.html { render :new }
