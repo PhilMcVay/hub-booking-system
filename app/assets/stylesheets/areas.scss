@@ -140,3 +140,14 @@ h1, h3 {
   font-weight: bold;
   color: $main;
 }
+
+textarea {
+  color: black;
+  outline: none;
+  &:focus {
+    color: black;
+  }
+  &:hover {
+    color: black;
+  }
+}

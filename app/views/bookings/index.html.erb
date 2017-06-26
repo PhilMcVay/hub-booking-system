@@ -24,7 +24,7 @@
         <td class="pending_items_element"><%= booking.no_of_people %></td>
         <td class="pending_items_element"><%= booking.status %></td>
         <td class="pending_items_element"><%= booking.area.name %></td>
-        <td class="action pending_items_element"><%= link_to 'Show', booking %></td>
+        <td class="action pending_items_element"><%= link_to 'Info', booking %></td>
         <td class="action pending_items_element"><%= link_to 'Edit', edit_booking_path(booking) %></td>
         <% if booking.details.exists? %>
           <td class="pending_items_element"><%= link_to 'Details', booking_detail_path(booking, booking.details.first) %></td>

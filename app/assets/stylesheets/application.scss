@@ -41,6 +41,12 @@ html, body {
   margin: 0;
 }
 
+a:hover {
+  color: white;
+  background-color: #8457A3;
+  transition: 0.2s ease-in-out;
+}
+
 .flex {
   display: flex;
 }
@@ -83,6 +89,11 @@ html, body {
     padding: 0;
     background-color: white;
     justify-content: space-between;
+    &:hover {
+      color: white;
+      background-color: #8457A3;
+      transition: 0.2s ease-in-out;
+    }
   }
 
 .topNav_item

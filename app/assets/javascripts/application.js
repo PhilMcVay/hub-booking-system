@@ -15,7 +15,7 @@
 //= require turbolinks
 //= require bootstrap-datepicker
 //= require_tree .
-//= require moment 
+//= require moment
 //= require fullcalendar
 
 
@@ -31,6 +31,7 @@ $(document).ready(function() {
         right: 'month,agendaWeek,agendaDay'
 	      },
 
+        defaultView: 'agendaWeek',
 				events: '/bookings.json',
 
 	      selectable: true,
@@ -38,10 +39,11 @@ $(document).ready(function() {
 	      editable: true,
 	      eventLimit: true,
 
-        eventRender: function(event, element, view) {                   
+        eventRender: function(event, element, view) {
             var ntoday = new Date().getTime();
             var eventEnd = moment( event.end ).valueOf();
             var eventStart = moment( event.start ).valueOf();
+
             if (!event.end){
                 if (eventStart < ntoday){
                     element.addClass("past-event");
@@ -66,8 +68,6 @@ $(document).ready(function() {
         // any other sources...
 
     		//]
-
-
 
 
 
