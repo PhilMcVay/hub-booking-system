@@ -19,25 +19,24 @@
 //= require fullcalendar
 
 
-$(document).ready(function() {
 
-    // page is now ready, initialize the calendar...
 
-    $('#calendar').fullCalendar({
-        // put your options and callbacks here
-    		header: {
+
+function calendar() {
+  return $('#calendar').fullCalendar({
+
+    header: {
         left: 'prev,next today',
         center: 'title',
         right: 'month,agendaWeek,agendaDay'
-	      },
+          },
+                defaultView: 'agendaWeek',
+                events: '/bookings.json',
 
-        defaultView: 'agendaWeek',
-				events: '/bookings.json',
-
-	      selectable: true,
-	      selectHelper: true,
-	      editable: true,
-	      eventLimit: true,
+          selectable: true,
+          selectHelper: true,
+          editable: true,
+          eventLimit: true,
 
         eventRender: function(event, element, view) {
             var ntoday = new Date().getTime();
@@ -57,23 +56,11 @@ $(document).ready(function() {
             }
         }
 
-        //eventSources: [
-        // your event source
-        //{
-        //    url: '/bookings.json', // use the `url` property
-        //    color: 'pink',    // an option!
-        //    textColor: 'black'  // an option!
-        //}
-
-        // any other sources...
-
-    		//]
-
-
-
-
-    })
-
-});
-
-document.addEventListener("turbolinks:load", function() { $('#calendar').fullCalendar({}); })
+  });
+};
+function clearCalendar() {
+  $('#calendar').fullCalendar('delete'); // In case delete doesn't work.
+  $('#calendar').html('');
+};
+$(document).on('turbolinks:load', calendar);
+$(document).on('turbolinks:before-cache', calendar)

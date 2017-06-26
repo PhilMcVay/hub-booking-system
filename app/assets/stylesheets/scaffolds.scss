@@ -16,18 +16,36 @@ $bold: 600;
 $br: 4px;
 
 body {
-  background-color: #fff;
+  max-width: 100%;
+  max-height: auto;
+
+
+  background: url('https://www.digitalhub.je/wp-content/uploads/2015/02/facilitiesgenpagepicx2400-updated.png') no-repeat top center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
   color: #333;
-  /*font-family: verdana, arial, helvetica, sans-serif;*/
-  font-family: 'DINOT-Regular', sans-serif;
+  font-family: 'DINOT', sans-serif;
   font-size: 13px;
   line-height: 15px;
   margin: 20px;
 }
 
+/*.yieldwrapper {
+  background: url('https://www.digitalhub.je/wp-content/uploads/2015/02/facilitiesgenpagepicx2400-updated.png') no-repeat center center fixed;
+  width: 100%;
+}*/
+
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
 p, ol, ul, td {
-  /*font-family: verdana, arial, helvetica, sans-serif;*/
-  font-family: 'DINOT-Regular', sans-serif;
+  font-family: 'DINOT', sans-serif;
   font-size: 13px;
   line-height: 18px;
   margin: 33px;
@@ -40,6 +58,7 @@ pre {
 }
 
 a {
+  font-family: 'DINOT', sans-serif;
   color: #000;
   text-decoration: none;
 
@@ -114,6 +133,7 @@ div
   }
 
   ul li {
+    font-family: 'DINOT', sans-serif;
     font-size: 12px;
     list-style: square;
   }
