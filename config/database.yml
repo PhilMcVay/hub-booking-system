@@ -13,7 +13,7 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
-  url: <%= ENV.fetch("JAWSDB_URL") %>
+  url: <%= ENV.fetch("DB_URL") %>
 
 development:
   <<: *default
