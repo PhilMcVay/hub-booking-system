@@ -1,0 +1,1 @@
+DB_URL: "mysql2://username:password@hostname/hub_booking_system_development"
