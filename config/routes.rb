@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
 
-  devise_for :users
-
+  #devise_for :users
+  devise_for :users, controllers: { 
+  			sessions: 'users/sessions',
+  			registrations: 'users/registrations' }
+  
+  #superadmin edits other users
+  #devise_for :users,: :path_prefix => 'my'
+  #resources :users
+  
   resources :resources
   resources :areas
 
@@ -10,6 +17,7 @@ Rails.application.routes.draw do
     post :approve
     end
 
-  root to: "areas#index"
+  #root to: "areas#index"
+  root to: "calendar#index"
 
 end

@@ -1,3 +1,140 @@
 // Place all the styles related to the Areas controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$body-bg: #c1bdba;
+$form-bg: white;
+/*$form-bg: #D0D9DE;*/
+$white: #ffffff;
+
+$main: #0089b9;
+$main-light: lighten($main,5%);
+$main-dark: darken($main,5%);
+
+$gray-light: #a0b3b0;
+$gray: #ddd;
+
+$thin: 300;
+$normal: 400;
+$bold: 600;
+$br: 4px;
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+	overflow-y: scroll;
+}
+
+
+.list_view {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  background:rgba($form-bg,.9);
+  padding: 40px;
+  max-width:80%;
+  margin:40px auto;
+  border-radius:$br;
+  box-shadow:0 4px 10px 4px rgba($form-bg,.3);
+  position: middle;
+}
+.area_show
+{
+display:flex;
+flex-direction: row-reverse;
+background:rgba($form-bg,.9);
+padding: 40px;
+max-width:1200px;
+margin:40px auto;
+border-radius:$br;
+box-shadow:0 4px 10px 4px rgba($form-bg,.3);
+
+}
+/*
+.area_show a {
+  display: inline-block;
+}*/
+h1, h3 {
+  text-align: center;
+  margin:0 0 40px;
+
+
+}
+
+.area_container
+{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  max-width:1200px;
+  margin:40px auto;
+}
+
+
+.areasT
+{
+  display: flex;
+  display: inline;
+  color: black;
+  justify-content: flex-start;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid #0082C8;
+  padding: 8px;
+  margin: 5px;
+}
+.show_Button
+{
+  display: block;
+}
+
+.area_item
+{
+  display: block;
+  color: black;
+  justify-content: flex-start;
+
+}
+
+.image_item
+{
+  display: flex;
+  justify-content: flex-start;
+
+}
+
+.roomtext
+{
+  color: #374EA1;
+  text-align: left;
+  margin-bottom: 10px;
+  margin-top: 10px;
+
+}
+
+.show_view th {
+  font-size: 16px;
+  color: $main;
+  text-align: left;
+}
+
+.show_view_heading {
+  font-size: 30px;
+  font-weight: bold;
+  color: $main;
+}
+
+textarea {
+  color: black;
+  outline: none;
+  &:focus {
+    color: black;
+  }
+  &:hover {
+    color: black;
+  }
+}

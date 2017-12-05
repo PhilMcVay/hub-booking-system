@@ -1,14 +1,51 @@
+$body-bg: #c1bdba;
+$form-bg: white;
+/*$form-bg: #D0D9DE;*/
+$white: #ffffff;
+
+$main: #0089b9;
+$main-light: lighten($main,5%);
+$main-dark: darken($main,5%);
+
+$gray-light: #a0b3b0;
+$gray: #ddd;
+
+$thin: 300;
+$normal: 400;
+$bold: 600;
+$br: 4px;
+
 body {
-  background-color: #fff;
+  max-width: 100%;
+  max-height: auto;
+
+
+  background: url('https://www.digitalhub.je/wp-content/uploads/2015/02/facilitiesgenpagepicx2400-updated.png') no-repeat top center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
   color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: 'DINOT', sans-serif;
   font-size: 13px;
-  line-height: 18px;
-  margin: 33px;
+  line-height: 15px;
+  margin: 20px;
+}
+
+/*.yieldwrapper {
+  background: url('https://www.digitalhub.je/wp-content/uploads/2015/02/facilitiesgenpagepicx2400-updated.png') no-repeat center center fixed;
+  width: 100%;
+}*/
+
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: 'DINOT', sans-serif;
   font-size: 13px;
   line-height: 18px;
   margin: 33px;
@@ -21,7 +58,11 @@ pre {
 }
 
 a {
+
+  font-family: 'DINOT', sans-serif;
   color: #000;
+
+  text-decoration: none;
 
   &:visited {
     color: #666;
@@ -29,7 +70,7 @@ a {
 
   &:hover {
     color: #fff;
-    background-color: #000;
+    background-color: #8457a3;
   }
 }
 
@@ -38,18 +79,33 @@ th {
 }
 
 td {
-  padding-bottom: 7px;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-bottom: 1px;
+  padding-left: 0.5px;
+  padding-right: 0.5px;
+  background-color: #fff;
+  .action {
+    margin: 0 10px;
+  }
 }
-
-div {
-  &.field, &.actions {
+.d_width
+{
+  width: 40%;
+  margin-bottom: 10px;
+}
+.i_width
+{
+  align-content: space-around;
+}
+div
+{
+&.field, &.actions
+{
     margin-bottom: 10px;
   }
 }
 
-#notice {
+#notice
+{
   color: green;
 }
 
@@ -79,6 +135,7 @@ div {
   }
 
   ul li {
+    font-family: 'DINOT', sans-serif;
     font-size: 12px;
     list-style: square;
   }
@@ -86,4 +143,8 @@ div {
 
 label {
   display: block;
+}
+
+.action {
+  margin: 0 10px;
 }

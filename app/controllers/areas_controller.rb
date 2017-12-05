@@ -1,4 +1,6 @@
 class AreasController < ApplicationController
+
+  load_and_authorize_resource
   before_action :set_area, only: [:show, :edit, :update, :destroy]
 
   # GET /areas
@@ -69,6 +71,6 @@ class AreasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def area_params
-      params.require(:area).permit(:name, :capacity, :type, :image)
+      params.require(:area).permit(:name, :capacity, :image, :description)
     end
 end

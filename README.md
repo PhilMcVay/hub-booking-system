@@ -1,24 +1,24 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Digital Jersey Coding Programme Project providing online booking facilities to the Digital Jersey hub
 
-Things you may want to cover:
+## Install
 
-* Ruby version
+Create a database, user & strong password
 
-* System dependencies
+Clone the source code
 
-* Configuration
+Run `bundle install`
 
-* Database creation
+Copy config/appliction.yml.example to config/application.yml:
+`cp config/application.yml.example config/application.yml`
 
-* Database initialization
+Update the database connection parameters
 
-* How to run the test suite
+Run rails db:migrate
 
-* Services (job queues, cache servers, search engines, etc.)
+Run rails db:seed
 
-* Deployment instructions
+Done
 
-* ...
+*Note:* The passwords for the admin users should be changed as soon as possible as they're in public version control.

@@ -1,5 +1,8 @@
 class BookingsController < ApplicationController
+
+  load_and_authorize_resource
   before_action :set_booking, only: [:show, :edit, :update, :destroy]
+
 
   # GET /bookings
   # GET /bookings.json
@@ -31,7 +34,7 @@ class BookingsController < ApplicationController
 
     respond_to do |format|
       if @booking.save
-        format.html { redirect_to new_booking_detail_path(@booking), notice: 'Room available. Please provide your details.' }
+        format.html { redirect_to new_booking_detail_path(@booking) }
         format.json { render :show, status: :created, location: @booking }
       else
         format.html { render :new }
@@ -69,7 +72,9 @@ class BookingsController < ApplicationController
   # Approve pending bookings
   def approve
     @booking = Booking.find(params[:booking_id])
+    @detail = Detail.where(params[:booking_id]).take!
     @booking.update(status: "Approved")
+    ConfirmationMailer.confirmation_email(@detail).deliver_now
     redirect_to bookings_path
   end
 

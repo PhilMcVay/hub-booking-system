@@ -13,4 +13,59 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap-datepicker
 //= require_tree .
+//= require moment
+//= require fullcalendar
+
+
+
+
+
+function calendar() {
+  $('#calendar').html('');
+  return $('#calendar').fullCalendar({
+
+    header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'month,agendaWeek,agendaDay'
+          },
+                defaultView: 'agendaWeek',
+                events: '/bookings.json',
+
+          selectable: true,
+          selectHelper: true,
+          editable: true,
+          eventLimit: true,
+        eventRender: function(event, element, view) {
+            var ntoday = new Date().getTime();
+            var eventEnd = moment( event.end ).valueOf();
+            var eventStart = moment( event.start ).valueOf();
+
+            if (!event.end){
+                if (eventStart < ntoday){
+                    element.addClass("past-event");
+                    element.children().addClass("past-event");
+                }
+            } else {
+                if (eventEnd < ntoday){
+                    element.addClass("past-event");
+                    element.children().addClass("past-event");
+                }
+            }
+
+            if(event.status.toLowerCase() == 'pending')
+            {
+              $(element).addClass('status-pending');
+            }
+        }
+
+  });
+};
+/*function clearCalendar() {
+  $('#calendar').fullCalendar('delete'); // In case delete doesn't work.
+  $('#calendar').html('');
+};*/
+$(document).on('turbolinks:load', calendar);
+//$(document).on('turbolinks:before-cache', calendar)

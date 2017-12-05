@@ -1,33 +1,36 @@
 <p id="notice"><%= notice %></p>
+<h1 class="list_view">Areas</h1>
+<div class="areasDiv">
+<div class="list_view">
 
-<h1>Areas</h1>
-
+<div class="list_view">
 <table>
   <thead>
-    <tr>
-      <th>Name</th>
-      <th>Capacity</th>
-      <th>Type</th>
-      <th>Image</th>
+    <tr class="show_view">
+      <th>ROOM</th>
+      <th>CAPACITY</th>
+      <th></th>
+      <th>DESCRIPTION</th>
       <th colspan="3"></th>
     </tr>
   </thead>
-
   <tbody>
     <% @areas.each do |area| %>
       <tr>
         <td><%= area.name %></td>
         <td><%= area.capacity %></td>
-        <td><%= area.type %></td>
-        <td><%= image_tag area.image.url(:thumb) %></td>
-        <td><%= link_to 'Show', area %></td>
-        <td><%= link_to 'Edit', edit_area_path(area) %></td>
-        <td><%= link_to 'Destroy', area, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="i_width"><%= image_tag area.image.url(:thumb) %></td>
+        <td class="d_width"><%= area.description %></td>
+        <td class="areasT"><%= link_to 'Info', area %></td>
+        <% if can? :update, @area %>
+          <td class="areasT"><%= link_to 'Edit', edit_area_path(area) %></td>
+          <td class="areasT"><%= link_to 'Delete', area, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
-
 <br>
-
-<%= link_to 'New Area', new_area_path %>
+</div>
+</div>
+</div>

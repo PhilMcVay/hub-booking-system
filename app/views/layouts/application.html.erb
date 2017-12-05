@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html>
   <head>
     <title>HubBookingSystem</title>
@@ -10,69 +10,144 @@
 
   <body>
 
-    <div>
-    <nav>
-      <ul class = 'top-nav'>
-        <li><img src='/HubLogo.png' height="120px"></li>
-        <li><a class='flex-item' href="#">Login</a></li>
+    <div class ="container" >
+
+    <nav class = 'topNav'>
+       <ul class='topNav_item'>
+
+         <li class="logo"><%= link_to image_tag("/HubLogo.png"), root_path %></li>
+           <!--<img src="<%= asset_path "Hub logo.png"%>" class="logo"alt="/HubLogo.png"/><a href="https://www.digitalhub.je"> --></a>
+
+
+          <% if user_signed_in? %>
+            <li>
+              <%= link_to 'Edit Account', edit_user_registration_path %>
+              <%= link_to 'Logout', destroy_user_session_path %>
+            </li>
+          <% else %>
+            <li>
+              <%= link_to 'Login', new_user_session_path  %>
+            </li>
+          <% end %>
       </ul>
 
       </nav>
+    </div>
 
-    <br>
-    <nav class ='main-nav'>
-      <ul>
-        <li class='flex-item'><a>VIEW CALENDAR</a>
-          <select>
-            <ptgroup label="Rate">
-              <option>Day</option>
-              <option>Week</option>
-              <option>Month</option>
+    <div class = "navMenu sticky">
 
-          </select>
-        </li>
+      <div class = "navMenuOptions">
 
-        <li class='flex-item'> <a>AREA</a>
-          <select>
-            <ptgroup label="area">
-              <option>Digital Jersey Hub</option>
-              <option>Edison</option>
-              <option>Breakout Zone</option>
-              <option>Skills Zone</option>
-              <option>Sandberg</option>
-              <option>Jobs</option>
-              <option>Gates</option>
+        <ul>
+          <div class = "navMenuLeft">
+            <li class='navMenu_item'><%= link_to "CALENDAR", root_path %></li>
 
-          </select></li>
-        <li class='flex-item'><a href="#">BOOK NOW </a></li>
-      </ul>
-    </nav>
+              <!--
+              <select>
+                <ptgroup label="Rate">
+                  <option>Day</option>
+                  <option>Week</option>
+                  <option>Month</option>
+
+              </select>
+
+
+
+
+            <div class ="dropdown">
+              <button class="dropbtn">Dropdown</button>
+              <div class="dropdown-content">
+                <a href="#">Day</a>
+                <a href="#">Week</a>
+                <a href="#">Month</a>
+              </div>-->
+
+          <li class='navMenu_item'> <%= link_to "VIEW AREAS", areas_path %></li>
+
+            <!--<select name= "areas[area_id]">
+              <% Area.all.each do |area|%>
+              <option value="area.id %>"><%= link_to "#{area.name}", area_path(area) %></option>
+              <% end %>
+            </select>-->
+          </div>
+              <!--<select>
+                <ptgroup label="area">
+                  <option>Digital Jersey Hub</option>
+                  <option>Edison <a><%= link_to "Edison", area_path(4) %></a></option>
+                  <option>Breakout Zone</option>
+                  <option>Skills Zone</option>
+                  <option>Sandberg</option>
+                  <option>Jobs</option>
+                  <option>Gates</option>
+
+              </select></li> -->
+              <div class = "navMenuRight">
+                <% if can? :manage, @booking %>
+                <li class='navMenu_item'><%= link_to "PENDING BOOKINGS", bookings_path %></li>
+                <% end %>
+                <% if can? :manage, @area %>
+                <li class='navMenu_item'><%= link_to "ADD AREA", new_area_path %></li>
+                <% end %>
+                <% if can? :manage, @resource %>
+                <li class='navMenu_item'><%= link_to "ADD RESOURCE", new_resource_path %></li>
+                <% end %>
+                <% if can? :manage, @user %>
+                <li class='navMenu_item'><%= link_to "ADD USER", new_user_registration_path %></li>
+                <% end %>
+                <li class='navMenu_item'><%= link_to "BOOK NOW", new_booking_path %></li>
+              </div>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
   </div>
 
-    <p class="notice"><%= notice %></p>
+    <p class="notice" "area_container"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= yield %>
+
+    <div class="yieldwrapper">
+      <%= yield %>
+    </div>
+    
     <nav>
       <ul class='sub-nav'>
-        <li> <a href="#"> <img src="/Edison.jpg" width="50px" height="50px">
-          Edison</a> </li>
-        <li><a href="#"> <img src ="/BreakoutZone.jpg" width="50px" height="50px" > Breakout Zone</a> </li>
-        <li><a href="#"> <img src ='/SkillZone.jpg' width="50px" height="50px"> Skills Zone</a></li>
-        <li><a href="#"> <img src ='/Sandberg.jpg' width="50px" height="50px"> Sandberg</a></li>
-        <li><a href="#"> <img src ='/Jobs.jpg' width="50px" height="50px"> Jobs</a></li>
-        <li><a href="#"> <img src ='/Gates.jpg' width="50px" height="50px"> Gates</a></li>
+        <li><img src="/Edison.jpg"><%= link_to "Edison", area_path(4) %></li>
+        <li><img src ="/BreakoutZone.jpg"> <%= link_to "Breakout Zone", area_path(2) %> </li>
+        <li><img src ='/SkillZone.jpg'> <%= link_to "Skills Zone", area_path(3) %> </li>
+        <li><img src ='/Sandberg.jpg'> <%= link_to "Sandberg", area_path(5) %></li>
+        <li><img src ='/Jobs.jpg'> <%= link_to "Jobs", area_path(6) %></li>
+        <li><img src ='/Gates.jpg'><%= link_to "Gates", area_path(7) %></li>
       </ul>
   </nav>
+<div class="navFooterBackground">
+    <footer class="navFooter">
+      <ul >
+        <li class='footerItem purplecolour'><a href='https://www.digitalhub.je/about-us/'>About Us </a> </li>
+        <li class='footerItem purplecolour'><a href='https://www.digitalhub.je/contact-us/'> Contact Us </a> </li>
+        <li class='footerItem purplecolour'><a href='https://www.digitalhub.je/terms-and-conditions/'>Terms and Conditions </a> </li>
+        <li class='footerItem purplecolour'><a href='https://www.digitalhub.je/privacy-policy/'> Privacy Policy</a></li>
+      </ul>
+      <ul>
+        <li class='footerItem graycolour'> Digital Jersey Hub, Block 3, The Forum, <br>Grenville Street, St Helier, <br>Jersey JE2 4UF.</li>
+      </ul>
+      <ul>
+        <li class='footerItem graycolour'> Phone: 01534 828 585 </li>
+        <li class='footerItem graycolour'><a href="mailto:info@digitalhub.je"> Email: info@digitalhub.je</a></li>
+      </ul>
+      <br>
 
-    <footer>
-      <ul><li>
-      <p class = 'footer'>
-         <a href='#'>About Us </a> <br><a href='#'>Contact Us </a> <br><a href='#'>Terms and Conditions </a> <br><a href='#'> Privacy Policy </a>
-      </p>
-      <p>Digital Jersey Hub, Block 3, The Forum, <br>Grenville Street, St Helier, <br>Jersey JE2 4UF.</p>
-      <p>Phone: 01534 828 585 <br>Email:<a href='#'>info@digitalhub.je</a></p>
-    </li></ul>
+
     </footer>
+
+      <%# testing phase only? %>
+      <div>
+        <% if user_signed_in? %>
+          <div>Signed in as: <%= current_user.email %> <br> Role: <%= current_user.role %></div>
+        <% end %>
+      </div>
+
+  </div>
 
   </body>
 </html>
