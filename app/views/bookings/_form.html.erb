@@ -42,7 +42,7 @@
 
     <div class="field">
       <%= f.label :area_id %>
-      <%= f.collection_select :area_id, @areas, :id, :name, { :prompt => "--Select--" } %>
+      <%= f.collection_select :area_id, @areas, :id, :name, { :prompt => "--Select--", :selected => @selected } %>
     </div>
 
     <div class="actions">
