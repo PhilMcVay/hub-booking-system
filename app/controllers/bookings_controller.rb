@@ -19,6 +19,12 @@ class BookingsController < ApplicationController
   def new
     @booking = Booking.new
     @areas = Area.all
+    @selected = nil
+
+    query = request.query_parameters
+    if query['area'] != nil
+      @selected = query['area']
+    end
   end
 
   # GET /bookings/1/edit

@@ -56,6 +56,18 @@ Rails.application.configure do
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "hub_booking_system_#{Rails.env}"
   config.action_mailer.perform_caching = false
+  config.action_mailer.delivery_method = :postmark
+  config.action_mailer.postmark_settings = { :api_token => "5ded5397-68bb-439a-944b-63e6c4a7ba52" }
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.postmarkapp.com',
+    port:                 587,
+    domain:               'example.com',
+    user_name:            '5ded5397-68bb-439a-944b-63e6c4a7ba52',
+    password:             '5ded5397-68bb-439a-944b-63e6c4a7ba52',
+    authentication:       'plain',
+    enable_starttls_auto: true  }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
