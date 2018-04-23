@@ -63,7 +63,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address:              'smtp.postmarkapp.com',
     port:                 587,
-    domain:               'example.com',
+#    domain:               'example.com',
     user_name:            '5ded5397-68bb-439a-944b-63e6c4a7ba52',
     password:             '5ded5397-68bb-439a-944b-63e6c4a7ba52',
     authentication:       'plain',
