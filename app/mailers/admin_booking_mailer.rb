@@ -1,13 +1,10 @@
+# frozen_string_literal: true
 class AdminBookingMailer < ApplicationMailer
-
   def admin_booking_email(user)
-    @url  = 'http://example.com/login'
+    @url = 'http://example.com/login'
 
-	puts user.inspect
+    puts user.inspect
 
-    mail(to: user["email"], subject: 'New Booking Request notification')
+    mail(to: user['email'], subject: 'New Booking Request notification')
   end
-
 end
-
-
