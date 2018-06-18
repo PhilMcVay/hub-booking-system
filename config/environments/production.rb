@@ -11,7 +11,7 @@ Rails.application.configure do
   config.eager_load = true
 
   # Full error reports are disabled and caching is turned on.
-  config.consider_all_requests_local       = false
+  config.consider_all_requests_local       = true
   config.action_controller.perform_caching = true
 
   # Disable serving static files from the `/public` folder by default since
@@ -56,8 +56,8 @@ Rails.application.configure do
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "hub_booking_system_#{Rails.env}"
   config.action_mailer.perform_caching = false
-  config.action_mailer.delivery_method = :postmark
-  config.action_mailer.postmark_settings = { :api_token => "5ded5397-68bb-439a-944b-63e6c4a7ba52" }
+#config.action_mailer.delivery_method = :postmark
+#config.action_mailer.postmark_settings = { :api_token => "5ded5397-68bb-439a-944b-63e6c4a7ba52" }
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
@@ -68,6 +68,9 @@ Rails.application.configure do
     password:             '5ded5397-68bb-439a-944b-63e6c4a7ba52',
     authentication:       'plain',
     enable_starttls_auto: true  }
+
+  # For Devise
+  config.action_mailer.default_url_options = { host: 'http://hubrooms.digital.je/' }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.

@@ -1,6 +1,6 @@
 class ConfirmationMailer < ApplicationMailer
 
-  default from: 'receptionisthub@gmail.com'
+  default from: 'info@digital.je'
 
   def confirmation_email(detail)
     @url  = 'http://example.com/login'
